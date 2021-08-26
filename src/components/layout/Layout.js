@@ -3,11 +3,15 @@ import Navigation from "../navigation/Navigation"
 import { GlobalStyles, LayoutCt } from "./GlobalStyles"
 
 const Layout = ({ children }) => {
-  const path = window.location.href.substring(22, 50)
+  // const removingNavigation =
+  //   window.location.href.includes("addpost") ||
+  //   window.location.href.includes("addstory")
+
   return (
     <LayoutCt>
       {children}
-      {path === "addstory" || <Navigation />}
+      <Navigation />
+      {/* {removingNavigation || <Navigation />} */}
       <GlobalStyles />
     </LayoutCt>
   )

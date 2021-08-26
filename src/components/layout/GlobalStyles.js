@@ -14,12 +14,17 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+    margin-bottom: 0;
+
 }
 li {
     list-style: none;
+    margin-bottom: 0;
+
 }
 p {
     font-size: 1rem;
+    margin-bottom: 0;
 }
 button{
     background-color: inherit;
