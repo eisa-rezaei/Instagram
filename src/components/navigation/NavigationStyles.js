@@ -12,7 +12,7 @@ export const NavContainer = styled.div`
   justify-content: space-around;
   position: absolute;
   bottom: 0;
-  & svg:hover {
+  .active-link {
     color: orange;
   }
 `
