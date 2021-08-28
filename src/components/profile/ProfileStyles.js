@@ -48,7 +48,7 @@ export const StyledProfileUserInfo = styled.div`
   & img {
     width: 80px;
     height: 80px;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 50%;
     border: 1px solid #d0d0d0;
   }

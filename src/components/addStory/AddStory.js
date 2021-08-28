@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react"
 import { Link } from "gatsby"
-import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose"
-import { IoIosFlash } from "@react-icons/all-files/io/IoIosFlash"
+import { AiOutlineClose } from "react-icons/ai"
+import { IoIosFlash } from "react-icons/io"
 import Layout from "../layout/Layout"
 import {
   StyledStoryPageCamera,
@@ -11,8 +11,8 @@ import {
   StyledStoryPageCt,
   StyledStoryPageheader,
 } from "./AddStoryStyles"
-import img1 from "../../assets/post6.jpeg"
-import img2 from "../../assets/post5.jpeg"
+import img1 from "../../assets/posts/post6.jpeg"
+import img2 from "../../assets/posts/post5.jpeg"
 
 const AddStory = () => {
   const videoRef = useRef(null)

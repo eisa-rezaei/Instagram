@@ -41,7 +41,7 @@ export const StyledHomeHeaderIcons = styled.div`
 `
 
 export const StyledHomeStories = styled.div`
-  width: auto;
+  width: 200%;
   height: 120px;
   display: flex;
   flex-direction: row;

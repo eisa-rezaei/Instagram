@@ -1,12 +1,14 @@
 import React from "react"
-import { RiAddCircleLine } from "@react-icons/all-files/ri/RiAddCircleLine"
-import { FaRegComment } from "@react-icons/all-files/fa/FaRegComment"
-import { FaRegCommentDots } from "@react-icons/all-files/fa/FaRegCommentDots"
-import { RiHeartLine } from "@react-icons/all-files/ri/RiHeartLine"
-import { MdAdd } from "@react-icons/all-files/md/MdAdd"
-import { BiDotsVerticalRounded } from "@react-icons/all-files/bi/BiDotsVerticalRounded"
-import { AiOutlineHeart } from "@react-icons/all-files/ai/AiOutlineHeart"
-import { BsBookmark } from "@react-icons/all-files/bs/BsBookmark"
+import { Link } from "gatsby"
+// import { StaticImage } from "gatsby-plugin-image"
+
+import { RiAddCircleLine } from "react-icons/ri"
+import { FaRegCommentDots, FaRegComment } from "react-icons/fa"
+import { RiHeartLine } from "react-icons/ri"
+import { MdAdd } from "react-icons/md"
+import { BiDotsVerticalRounded } from "react-icons/bi"
+import { AiOutlineHeart } from "react-icons/ai"
+import { BsBookmark } from "react-icons/bs"
 
 import Layout from "../layout/Layout"
 import {
@@ -24,7 +26,6 @@ import {
 } from "./HomePageStyle"
 
 import { posts, stories } from "../../data/data"
-import { Link } from "gatsby"
 
 const HomePage = () => {
   return (
