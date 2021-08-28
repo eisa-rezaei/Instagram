@@ -17,14 +17,14 @@ const Likes = () => {
   return (
     <Layout>
       <StyledLikePageCt>
-        <StyledLikePageHeader>Activitise</StyledLikePageHeader>
+        <StyledLikePageHeader>Activities</StyledLikePageHeader>
         <StyledLikePageContentHead>
           <span>
             <FiArrowUpRight />
           </span>
           <StyledLikePageContentHeadInfo>
             <h1>Promotions</h1>
-            <p> Recent actions from your Activitise .</p>
+            <p> Recent actions from your Activities.</p>
           </StyledLikePageContentHeadInfo>
         </StyledLikePageContentHead>
         <StyledLikePageContent>

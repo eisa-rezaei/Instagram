@@ -32,7 +32,7 @@ import { highlights } from "../../data/data"
 const userData = {
   name: "Eisa Reazaei",
   title: "front end web developer",
-  bio: "front end react web developer from iran country",
+  bio: "front end react web developer living in iran country",
   id: "eisa.rez",
   followers: 675,
   followings: 452,
@@ -45,7 +45,7 @@ const Profile = () => {
       <StyledProfilePageCt>
         <StyledProfileHeader>
           <span>
-            <p> {userData.id}</p>
+            <p>{userData.id}</p>
             <HiOutlineChevronDown />
           </span>
           <span>
@@ -58,12 +58,12 @@ const Profile = () => {
           <StyledProfileUserInfoFollowers>
             <span>
               <h6>{userData.posts}</h6>
-              <p> posts</p>
+              <p>posts</p>
             </span>
             <BsThreeDotsVertical />
             <span>
               <h6>{userData.followers}</h6>
-              <p> followers</p>
+              <p>followers</p>
             </span>
             <BsThreeDotsVertical />
             <span>
