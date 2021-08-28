@@ -1,17 +1,16 @@
 import React from "react"
 import Navigation from "../navigation/Navigation"
 import { GlobalStyles, LayoutCt } from "./GlobalStyles"
+import { useLocation } from "@reach/router"
 
 const Layout = ({ children }) => {
-  // const removingNavigation =
-  //   window.location.href.includes("addpost") ||
-  //   window.location.href.includes("addstory")
+  const location = useLocation()
 
   return (
     <LayoutCt>
       {children}
-      <Navigation />
-      {/* {removingNavigation || <Navigation />} */}
+      {location.pathname === "/addstory" ||
+        location.pathname === "/addpost" || <Navigation />}
       <GlobalStyles />
     </LayoutCt>
   )

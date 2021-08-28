@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from "styled-components"
 export const GlobalStyles = createGlobalStyle`
 body {
     background-color: #ece6f3;
+    user-select: none;
 }
 *{
     border: 0;
@@ -31,7 +32,7 @@ button{
     cursor: pointer;
 }
 `
-export const LayoutCt = styled.main`
+export const LayoutCt = styled.section`
   width: 420px;
   height: 95vh;
   display: flex;
@@ -43,4 +44,5 @@ export const LayoutCt = styled.main`
   overflow: hidden;
   background-color: #fff;
   position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 `

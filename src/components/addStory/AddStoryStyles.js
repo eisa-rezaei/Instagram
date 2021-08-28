@@ -39,15 +39,16 @@ export const StyledStoryPageheader = styled.header`
   z-index: 2;
   padding: 25px 40px;
   position: absolute;
-  color: #fff;
-  font-size: 1.8rem;
-  background-color: inherit;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   & svg {
+    color: #222;
     cursor: pointer;
+    background-color: #ffffff80;
+    border-radius: 50%;
+    font-size: 2rem;
+    padding: 5px;
     :hover {
       color: orange;
     }

@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../layout/Layout"
-import { HiOutlineChevronDown } from "@react-icons/all-files/hi/HiOutlineChevronDown"
-import { GoThreeBars } from "@react-icons/all-files/go/GoThreeBars"
-import { BsThreeDotsVertical } from "@react-icons/all-files/bs/BsThreeDotsVertical"
-import { MdAdd } from "@react-icons/all-files/md/MdAdd"
-import { BsFillGrid1X2Fill } from "@react-icons/all-files/bs/BsFillGrid1X2Fill"
-import { FaUserTag } from "@react-icons/all-files/fa/FaUserTag"
+
+import { HiOutlineChevronDown } from "react-icons/hi"
+import { GoThreeBars } from "react-icons/go"
+import { MdAdd } from "react-icons/md"
+import { BsFillGrid1X2Fill, BsThreeDotsVertical } from "react-icons/bs"
+import { FaUserTag } from "react-icons/fa"
 
 import {
   StyledProfileHeader,
@@ -20,22 +20,32 @@ import {
   StyledProfileUserInfoEditBtns,
   StyledProfileUserInfoFollowers,
 } from "./ProfileStyles"
-import { RiAddCircleLine } from "@react-icons/all-files/ri/RiAddCircleLine"
+import { RiAddCircleLine } from "react-icons/ri"
 
-import userImage from "../../assets/user-image.png"
-import post1 from "../../assets/post4.jpg"
-import post3 from "../../assets/post5.jpeg"
-import post2 from "../../assets/post6.jpeg"
+import userImage from "../../assets/avatars/user-image.png"
+import post1 from "../../assets/posts/post4.jpg"
+import post3 from "../../assets/posts/post5.jpeg"
+import post2 from "../../assets/posts/post6.jpeg"
 
 import { highlights } from "../../data/data"
 
+const userData = {
+  name: "Eisa Reazaei",
+  title: "front end web developer",
+  bio: "front end react web developer from iran country",
+  id: "eisa.rez",
+  followers: 675,
+  followings: 452,
+  posts: 6,
+  location: "Iran",
+}
 const Profile = () => {
   return (
     <Layout>
       <StyledProfilePageCt>
         <StyledProfileHeader>
           <span>
-            <p> eisa.rez</p>
+            <p> {userData.id}</p>
             <HiOutlineChevronDown />
           </span>
           <span>
@@ -47,27 +57,27 @@ const Profile = () => {
           <img src={userImage} alt="user-pic" />
           <StyledProfileUserInfoFollowers>
             <span>
-              <h6>21</h6>
+              <h6>{userData.posts}</h6>
               <p> posts</p>
             </span>
             <BsThreeDotsVertical />
             <span>
-              <h6>563</h6>
+              <h6>{userData.followers}</h6>
               <p> followers</p>
             </span>
             <BsThreeDotsVertical />
             <span>
-              <h6>172</h6>
+              <h6>{userData.followings}</h6>
               <p> following</p>
             </span>
           </StyledProfileUserInfoFollowers>
         </StyledProfileUserInfo>
         <StyledProfileUserInfoBio>
           <h6>
-            Eisa Rezaei <span> front end web developer </span>
+            {userData.name} <span> {userData.title} </span>
           </h6>
-          <p> front end react web developer from iran country </p>
-          <p> IRAN </p>
+          <p> {userData.bio} </p>
+          <p> {userData.location} </p>
         </StyledProfileUserInfoBio>
         <StyledProfileUserInfoEditBtns>
           <button> Edit profile </button>
