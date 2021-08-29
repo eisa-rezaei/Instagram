@@ -164,30 +164,26 @@ export const StyledProfilePostsNav = styled.div`
 export const StyledProfilePostsCt = styled.div`
   width: 100%;
   height: auto;
-  overflow-y: scroll;
+  overflow-x: scroll;
 `
 
 export const StyledProfilePostsCtImages = styled.div`
   width: 100%;
-  height: 300px;
+  height: auto;
   margin-top: 15px;
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
-  flex-direction: ${props => props.flex};
+  justify-content: left;
+  flex-wrap: wrap;
+`
+export const StyledProfilePageSinlgePost = styled.div`
+  width: 126px;
+  height: 127px;
   & img {
-    width: 59%;
-    height: 310px;
-    border-radius: 20px;
-  }
-  & span {
-    width: 49%;
-    height: 300px;
-    margin: 0 5px;
-    & img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 20px;
-    }
+    width: 120px;
+    height: 125px;
+    margin: 0 2px 2px 0;
+    object-fit: cover;
   }
 `
