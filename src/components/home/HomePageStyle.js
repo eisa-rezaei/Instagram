@@ -6,8 +6,9 @@ export const StyledHomeCt = styled.main`
   margin: 0 auto;
   padding: 1rem;
   padding-bottom: 60px;
-  background-color: #fff;
+  position: relative;
   font-size: 3rem;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: baseline;
@@ -29,6 +30,7 @@ export const StyledHomeHeader = styled.header`
   }
   & svg {
     cursor: pointer;
+    transition: all 0.15s linear;
     :hover {
       color: orange;
     }
@@ -94,11 +96,11 @@ export const StyledHomeUserStory = styled.span`
   color: #606060;
 `
 export const StyledHomePosts = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
   overflow: scroll;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
   border-radius: 30px 30px 0 0;
 `
 export const StyledHomeSinglePost = styled.div`
@@ -132,6 +134,13 @@ export const StyledHomeSinglePostHead = styled.header`
     rgba(255, 255, 255, 0) 0%,
     rgba(84, 84, 84, 0.5) 100%
   );
+  & svg {
+    transition: all 0.15s linear;
+    :hover {
+      cursor: pointer;
+      color: orange;
+    }
+  }
 `
 export const StyledHomeSinglePostHeadDetails = styled.div`
   width: 200px;
@@ -151,6 +160,13 @@ export const StyledHomeSinglePostHeadDetails = styled.div`
   }
   & h5 {
     font-size: 1.5rem;
+  }
+  & p {
+    transition: all 0.15s linear;
+    :hover {
+      color: orange;
+      cursor: pointer;
+    }
   }
 `
 
@@ -172,6 +188,7 @@ export const StyledHomeSinglePostLikesCommentsBox = styled.div`
     font-size: 1.4rem;
     margin: 10px;
     cursor: pointer;
+    transition: all 0.15s linear;
     :hover {
       color: orange;
     }
@@ -182,4 +199,46 @@ export const StyledHomeSinglePostLikesCommentsBox = styled.div`
     align-items: center;
     justify-content: space-between;
   }
+`
+export const StyledHomeSinglePostPostOption = styled.div`
+  width: 100%;
+  height: 310px;
+  ${props =>
+    props.postOptionIsOpen
+      ? ` transform: translateY(0%);`
+      : `  transform: translateY(100%);`};
+  bottom: 60px;
+  left: 0;
+  color: #222;
+  font-size: 1rem;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  transition: all 0.2s ease-in-out;
+  border-radius: 30px 30px 0 0;
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 3;
+
+  & span {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    transition: all 0.15s linear;
+    :hover {
+      background-color: #e0e0e0;
+      cursor: pointer;
+    }
+  }
+`
+// display shade on screen
+export const StyledHomeShade = styled.div`
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 2;
+  background-color: #00000050;
+  ${props => (props.postOptionIsOpen ? `display:block` : `display:none;`)}
 `

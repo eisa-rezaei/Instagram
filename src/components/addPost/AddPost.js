@@ -48,7 +48,13 @@ const AddPost = () => {
         </StyledImgLocation>
         <StyledImgList>
           {posts.map(({ image, id, title }) => (
-            <img src={image} alt={title} onClick={imageChanger(id)} key={id} />
+            <img
+              src={image}
+              alt={title}
+              onClick={imageChanger(id)}
+              onKeyDown={imageChanger(id)}
+              key={id}
+            />
           ))}
         </StyledImgList>
       </StyledAddPostCt>

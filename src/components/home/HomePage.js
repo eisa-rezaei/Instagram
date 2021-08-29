@@ -1,7 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
-// import { StaticImage } from "gatsby-plugin-image"
 
+//icons
 import { RiAddCircleLine } from "react-icons/ri"
 import { FaRegCommentDots, FaRegComment } from "react-icons/fa"
 import { RiHeartLine } from "react-icons/ri"
@@ -10,27 +10,41 @@ import { BiDotsVerticalRounded } from "react-icons/bi"
 import { AiOutlineHeart } from "react-icons/ai"
 import { BsBookmark } from "react-icons/bs"
 
+//styled components
 import Layout from "../layout/Layout"
 import {
   StyledHomeCt,
   StyledHomeHeader,
   StyledHomeHeaderIcons,
   StyledHomePosts,
+  StyledHomeShade,
   StyledHomeSinglePost,
   StyledHomeSinglePostHead,
   StyledHomeSinglePostHeadDetails,
   StyledHomeSinglePostLikesCommentsBox,
+  StyledHomeSinglePostPostOption,
   StyledHomeStories,
   StyledHomeStory,
   StyledHomeUserStory,
 } from "./HomePageStyle"
 
+//data
 import { posts, stories } from "../../data/data"
 
+//component
 const HomePage = () => {
+  const [postOptionIsOpen, setPostOptionIsOpen] = useState(false)
+  const togglePostOptionHandler = id => () => {
+    setPostOptionIsOpen(!postOptionIsOpen)
+  }
+
   return (
     <Layout>
       <StyledHomeCt>
+        <StyledHomeShade
+          onClick={() => setPostOptionIsOpen(false)}
+          postOptionIsOpen={postOptionIsOpen}
+        />
         <StyledHomeHeader>
           <span>Instagram</span>
           <StyledHomeHeaderIcons>
@@ -66,10 +80,12 @@ const HomePage = () => {
                     <img src={user} alt={name} />
                     <span>
                       <h5>{name}</h5>
-                      <p>{location}</p>
+                      <Link to={`/location/${id}`}>
+                        <p>{location}</p>
+                      </Link>
                     </span>
                   </StyledHomeSinglePostHeadDetails>
-                  <BiDotsVerticalRounded />
+                  <BiDotsVerticalRounded onClick={togglePostOptionHandler()} />
                 </StyledHomeSinglePostHead>
                 <StyledHomeSinglePostLikesCommentsBox>
                   <span>
@@ -89,6 +105,24 @@ const HomePage = () => {
             )
           )}
         </StyledHomePosts>
+
+        <StyledHomeSinglePostPostOption postOptionIsOpen={postOptionIsOpen}>
+          <span aria-hidden="true" onClick={() => setPostOptionIsOpen(false)}>
+            Report ...
+          </span>
+          <span aria-hidden="true" onClick={() => setPostOptionIsOpen(false)}>
+            Hide
+          </span>
+          <span aria-hidden="true" onClick={() => setPostOptionIsOpen(false)}>
+            Turn on Post Notifications
+          </span>
+          <span aria-hidden="true" onClick={() => setPostOptionIsOpen(false)}>
+            Copy Link
+          </span>
+          <span aria-hidden="true" onClick={() => setPostOptionIsOpen(false)}>
+            Share to
+          </span>
+        </StyledHomeSinglePostPostOption>
       </StyledHomeCt>
     </Layout>
   )

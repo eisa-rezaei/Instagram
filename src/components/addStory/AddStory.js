@@ -11,8 +11,7 @@ import {
   StyledStoryPageCt,
   StyledStoryPageheader,
 } from "./AddStoryStyles"
-import img1 from "../../assets/posts/post6.jpeg"
-import img2 from "../../assets/posts/post5.jpeg"
+import { posts } from "../../data/data"
 
 const AddStory = () => {
   const videoRef = useRef(null)
@@ -77,9 +76,11 @@ const AddStory = () => {
           ref={photoRef}
         ></StyledStoryPageCameraResult>
         {hasTaken ? (
-          <span onClick={removephotoHandler}>x</span>
+          <span aria-hidden="true" onClick={removephotoHandler}>
+            x
+          </span>
         ) : (
-          <span onClick={takePhotoHandler}>
+          <span aria-hidden="true" onClick={takePhotoHandler}>
             <p />
           </span>
         )}
@@ -94,12 +95,9 @@ const AddStory = () => {
             <p>Camera Roll</p>
           </StyledStoryPageCameraGallaryLinks>
 
-          <img src={img1} alt="img1" />
-          <img src={img2} alt="img1" />
-          <img src={img1} alt="img1" />
-          <img src={img1} alt="img1" />
-          <img src={img2} alt="img1" />
-          <img src={img1} alt="img1" />
+          {posts.map(({ image, title }, id) => (
+            <img src={image} alt={title} key={id} />
+          ))}
         </StyledStoryPageCameraGallary>
       </StyledStoryPageCt>
     </Layout>
