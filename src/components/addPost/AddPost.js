@@ -1,18 +1,25 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+
+// icons
+
 import { BsArrowRight } from "react-icons/bs"
 import { AiOutlineCamera, AiOutlineClose } from "react-icons/ai"
 import { IoMdCopy } from "react-icons/io"
 import { HiOutlineChevronDown } from "react-icons/hi"
+
+import { posts } from "../../data/data"
+
 import Layout from "../layout/Layout"
+import ImageContainer from "./ImageContainer"
 import {
   StyledAddPostCt,
   StyledHeader,
   StyledImgList,
   StyledImgLocation,
 } from "./AddPostStyles"
-import { posts } from "../../data/data"
-import ImageContainer from "./ImageContainer"
+
+// component
 
 const AddPost = () => {
   const [currentImg, setCurrentImg] = useState(1)
@@ -38,7 +45,6 @@ const AddPost = () => {
             Gallary
             <HiOutlineChevronDown />
           </p>
-
           <span>
             <IoMdCopy />
             <Link to="/addstory">
@@ -48,13 +54,9 @@ const AddPost = () => {
         </StyledImgLocation>
         <StyledImgList>
           {posts.map(({ image, id, title }) => (
-            <img
-              src={image}
-              alt={title}
-              onClick={imageChanger(id)}
-              onKeyDown={imageChanger(id)}
-              key={id}
-            />
+            <span onClick={imageChanger(id)} aria-hidden="true" key={id}>
+              <img src={image} alt={title} key={id} />
+            </span>
           ))}
         </StyledImgList>
       </StyledAddPostCt>

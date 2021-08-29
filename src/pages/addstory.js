@@ -2,7 +2,7 @@ import React from "react"
 import AddStory from "../components/addStory/AddStory"
 
 const addstory = () => {
-  return <AddStory />
+  return <AddStory suppressHydrationWarning />
 }
 
 export default addstory
