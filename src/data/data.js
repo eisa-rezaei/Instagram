@@ -218,7 +218,6 @@ export const users = [
     bio: "hello my name is nick ",
     title: " web prgrammer",
     highlights: highlights,
-    posts: 8,
   },
   {
     avatar: avatar2,
@@ -230,7 +229,6 @@ export const users = [
     bio: "hello my name is john ",
     title: "worker",
     highlights: highlights,
-    posts: 5,
   },
   {
     avatar: avatar3,
@@ -242,7 +240,6 @@ export const users = [
     bio: "hello my name is mahsa Iranian ",
     title: " paniter ",
     highlights: highlights,
-    posts: 2,
   },
   {
     avatar: avatar4,
@@ -254,7 +251,6 @@ export const users = [
     bio: "hello my name is Ali ",
     title: " manager ",
     highlights: highlights,
-    posts: 10,
   },
   {
     avatar: avatar9,
@@ -266,7 +262,6 @@ export const users = [
     bio: "hello my name is fateme and i am from Iran ",
     title: " desiner ",
     highlights: highlights,
-    posts: 8,
   },
   {
     avatar: avatar10,
@@ -278,7 +273,6 @@ export const users = [
     bio: "hello my name is eisa and i am from Tehran ",
     title: " web developer ",
     highlights: highlights,
-    posts: 3,
   },
   {
     avatar: avatar5,
@@ -290,7 +284,6 @@ export const users = [
     bio: "Hello There ! my name is susan and i am from SomeWhere ",
     title: " local guide ",
     highlights: highlights,
-    posts: 23,
   },
   {
     avatar: avatar13,
@@ -302,7 +295,6 @@ export const users = [
     bio: "Heyoo ! my name is elisa and i am from mashhad ",
     title: " engineer  ",
     highlights: highlights,
-    posts: 5,
   },
   {
     avatar: avatar8,
@@ -314,6 +306,16 @@ export const users = [
     bio: "hello my name is AliReza living in boshehr ",
     title: " student ",
     highlights: highlights,
-    posts: 20,
+  },
+  {
+    avatar: avatar7,
+    name: "sara",
+    username: "sara.ssss",
+    followers: 204,
+    followings: 1134,
+    user_id: 9,
+    bio: "hello my name is sara living in hamedan ",
+    title: " student ",
+    highlights: highlights,
   },
 ]

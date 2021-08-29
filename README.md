@@ -4,6 +4,6 @@
  
  THIS PAGE IN POWERED BY EISA REZAEI
 
-# Instagram
+<img src="./static/instagram.jpeg" width="100%" height="700px"  alt ="instagram"/>
 
-<img src="./static/instagram.jpeg" width="100%" height="600px"  alt ="instagram"/>
+# Instagram

@@ -15,13 +15,14 @@ import post1 from "../../assets/posts/post4.jpg"
 import post3 from "../../assets/posts/post5.jpeg"
 import post2 from "../../assets/posts/post6.jpeg"
 
-import { highlights } from "../../data/data"
+import { highlights, posts } from "../../data/data"
 
 import {
   StyledProfileHeader,
   StyledProfileHighlite,
   StyledProfileHighlites,
   StyledProfilePageCt,
+  StyledProfilePageSinlgePost,
   StyledProfilePostsCt,
   StyledProfilePostsCtImages,
   StyledProfilePostsNav,
@@ -43,9 +44,15 @@ const Profile = ({ user }) => {
     posts: 6,
     location: "Iran",
     highlights: highlights,
+    userposts: [
+      { image: post1, id: 120942, title: "picture" },
+      { image: post2, id: 124345, title: "picture2" },
+      { image: post3, id: 234213, title: "picture3" },
+    ],
   }
 
   const userInfo = user ? user[0] : initialUser
+
   const userData = {
     avatar: userInfo.avatar,
     name: userInfo.name,
@@ -54,9 +61,11 @@ const Profile = ({ user }) => {
     username: userInfo.username,
     followers: userInfo.followers,
     followings: userInfo.followings,
-    posts: userInfo.posts,
     location: "Iran",
     highlights: userInfo.highlights,
+    userposts:
+      userInfo.userposts ||
+      posts.filter(post => post.username === userInfo.username),
   }
 
   return (
@@ -76,7 +85,7 @@ const Profile = ({ user }) => {
           <img src={userData.avatar} alt="user-pic" />
           <StyledProfileUserInfoFollowers>
             <span>
-              <h6>{userData.posts}</h6>
+              <h6>{userData.userposts.length}</h6>
               <p>posts</p>
             </span>
             <BsThreeDotsVertical />
@@ -134,19 +143,12 @@ const Profile = ({ user }) => {
           </span>
         </StyledProfilePostsNav>
         <StyledProfilePostsCt>
-          <StyledProfilePostsCtImages flex="row">
-            <img src={post1} alt="post1" />
-            <span>
-              <img src={post2} alt="post2" />
-              <img src={post3} alt="post2" />
-            </span>
-          </StyledProfilePostsCtImages>
-          <StyledProfilePostsCtImages flex="row-reverse">
-            <img src={post1} alt="post1" />
-            <span>
-              <img src={post2} alt="post2" />
-              <img src={post3} alt="post2" />
-            </span>
+          <StyledProfilePostsCtImages>
+            {userData.userposts.map(({ image, id, title }) => (
+              <StyledProfilePageSinlgePost key={id}>
+                <img src={image} alt={title} />
+              </StyledProfilePageSinlgePost>
+            ))}
           </StyledProfilePostsCtImages>
         </StyledProfilePostsCt>
       </StyledProfilePageCt>
