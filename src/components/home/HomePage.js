@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 
-//icons
+// icons
 import { RiAddCircleLine } from "react-icons/ri"
 import { FaRegCommentDots, FaRegComment } from "react-icons/fa"
 import { RiHeartLine } from "react-icons/ri"
@@ -10,7 +10,7 @@ import { BiDotsVerticalRounded } from "react-icons/bi"
 import { AiOutlineHeart } from "react-icons/ai"
 import { BsBookmark } from "react-icons/bs"
 
-//styled components
+// styled components
 import Layout from "../layout/Layout"
 import {
   StyledHomeCt,
@@ -21,6 +21,7 @@ import {
   StyledHomeSinglePost,
   StyledHomeSinglePostHead,
   StyledHomeSinglePostHeadDetails,
+  StyledHomeSinglePostHeadDetailsUserInfo,
   StyledHomeSinglePostLikesCommentsBox,
   StyledHomeSinglePostPostOption,
   StyledHomeStories,
@@ -28,10 +29,19 @@ import {
   StyledHomeUserStory,
 } from "./HomePageStyle"
 
-//data
+// data
 import { posts, stories } from "../../data/data"
 
-//component
+// static array of data
+const postOptions = [
+  "Report...",
+  "Hide",
+  "Turn on Post Notifications",
+  "Copy Link",
+  "Share to",
+]
+
+// component
 const HomePage = () => {
   const [postOptionIsOpen, setPostOptionIsOpen] = useState(false)
   const togglePostOptionHandler = id => () => {
@@ -73,17 +83,31 @@ const HomePage = () => {
         </StyledHomeStories>
         <StyledHomePosts>
           {posts.map(
-            ({ image, id, title, user, location, name, likes, comments }) => (
+            ({
+              image,
+              id,
+              title,
+              user,
+              location,
+              name,
+              likes,
+              comments,
+              username,
+            }) => (
               <StyledHomeSinglePost key={id}>
                 <StyledHomeSinglePostHead>
                   <StyledHomeSinglePostHeadDetails>
-                    <img src={user} alt={name} />
-                    <span>
-                      <h5>{name}</h5>
+                    <Link to={`/profile/${username}`}>
+                      <img src={user} alt={name} />
+                    </Link>
+                    <StyledHomeSinglePostHeadDetailsUserInfo>
+                      <Link to={`/profile/${username}`}>
+                        <h5>{name}</h5>
+                      </Link>
                       <Link to={`/location/${id}`}>
                         <p>{location}</p>
                       </Link>
-                    </span>
+                    </StyledHomeSinglePostHeadDetailsUserInfo>
                   </StyledHomeSinglePostHeadDetails>
                   <BiDotsVerticalRounded onClick={togglePostOptionHandler()} />
                 </StyledHomeSinglePostHead>
@@ -105,23 +129,16 @@ const HomePage = () => {
             )
           )}
         </StyledHomePosts>
-
         <StyledHomeSinglePostPostOption postOptionIsOpen={postOptionIsOpen}>
-          <span aria-hidden="true" onClick={() => setPostOptionIsOpen(false)}>
-            Report ...
-          </span>
-          <span aria-hidden="true" onClick={() => setPostOptionIsOpen(false)}>
-            Hide
-          </span>
-          <span aria-hidden="true" onClick={() => setPostOptionIsOpen(false)}>
-            Turn on Post Notifications
-          </span>
-          <span aria-hidden="true" onClick={() => setPostOptionIsOpen(false)}>
-            Copy Link
-          </span>
-          <span aria-hidden="true" onClick={() => setPostOptionIsOpen(false)}>
-            Share to
-          </span>
+          {postOptions.map((item, index) => (
+            <li
+              aria-hidden="true"
+              onClick={() => setPostOptionIsOpen(false)}
+              key={index}
+            >
+              {item}
+            </li>
+          ))}
         </StyledHomeSinglePostPostOption>
       </StyledHomeCt>
     </Layout>

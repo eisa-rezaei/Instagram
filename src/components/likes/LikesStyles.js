@@ -88,4 +88,7 @@ export const StyledLikePageListItemInfoButton = styled.button`
   color: #fff;
   background-color: #2f93f5;
   border-radius: 10px;
+  :hover {
+    background-color: #4fb3ff;
+  }
 `

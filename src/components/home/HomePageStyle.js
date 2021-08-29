@@ -147,19 +147,30 @@ export const StyledHomeSinglePostHeadDetails = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  & span {
-    width: 150px;
+
+  & a {
     display: flex;
-    flex-direction: column;
-    margin-left: 20px;
+    align-items: center;
+    & img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      :hover {
+        border: 1px solid orange;
+      }
+    }
   }
-  & img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
+`
+export const StyledHomeSinglePostHeadDetailsUserInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
   & h5 {
     font-size: 1.5rem;
+    :hover {
+      text-shadow: 1px 1px 1px orange;
+    }
   }
   & p {
     transition: all 0.15s linear;
@@ -200,7 +211,7 @@ export const StyledHomeSinglePostLikesCommentsBox = styled.div`
     justify-content: space-between;
   }
 `
-export const StyledHomeSinglePostPostOption = styled.div`
+export const StyledHomeSinglePostPostOption = styled.ul`
   width: 100%;
   height: 310px;
   ${props =>
@@ -220,7 +231,7 @@ export const StyledHomeSinglePostPostOption = styled.div`
   overflow: hidden;
   z-index: 3;
 
-  & span {
+  & li {
     width: 100%;
     height: 100%;
     padding: 20px;

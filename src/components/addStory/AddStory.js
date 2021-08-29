@@ -1,7 +1,12 @@
 import React, { useRef, useState, useEffect } from "react"
 import { Link } from "gatsby"
+
+// icons
+
 import { AiOutlineClose } from "react-icons/ai"
 import { IoIosFlash } from "react-icons/io"
+
+import { posts } from "../../data/data"
 import Layout from "../layout/Layout"
 import {
   StyledStoryPageCamera,
@@ -11,12 +16,24 @@ import {
   StyledStoryPageCt,
   StyledStoryPageheader,
 } from "./AddStoryStyles"
-import { posts } from "../../data/data"
+
+// static array data
+
+const galleryLinks = [
+  "Camera Roll",
+  "Screen Shots",
+  "Favorites",
+  "Holiday 2021",
+  "Gallary Roll",
+  "boo Roll",
+  "jooo Roll",
+]
+
+// component
 
 const AddStory = () => {
   const videoRef = useRef(null)
   const photoRef = useRef(null)
-
   const [hasTaken, setHasTaken] = useState(false)
 
   const getVideo = () => {
@@ -29,38 +46,32 @@ const AddStory = () => {
       })
       .catch(err => console.log(err))
   }
+
   useEffect(() => {
     getVideo()
   }, [videoRef])
 
+  // handler functions
+
   const takePhotoHandler = () => {
     const width = 280
     const height = width / (16 / 9)
-
     let video = videoRef.current
     let photo = photoRef.current
-
     let ctx = photo.getContext("2d")
-
     ctx.drawImage(video, 0, 0, width, height)
-
     setHasTaken(true)
   }
 
   const removephotoHandler = () => {
     const width = 280
     const height = width / (16 / 9)
-
     let video = videoRef.current
     let photo = photoRef.current
-
     let ctx = photo.getContext("2d")
-
     ctx.clearRect(video, 0, 0, width, height)
-
     setHasTaken(false)
   }
-
   return (
     <Layout>
       <StyledStoryPageCt>
@@ -70,7 +81,7 @@ const AddStory = () => {
           </Link>
           <IoIosFlash />
         </StyledStoryPageheader>
-        <StyledStoryPageCamera ref={videoRef}>.</StyledStoryPageCamera>
+        <StyledStoryPageCamera ref={videoRef}></StyledStoryPageCamera>
         <StyledStoryPageCameraResult
           taken={hasTaken}
           ref={photoRef}
@@ -86,15 +97,10 @@ const AddStory = () => {
         )}
         <StyledStoryPageCameraGallary>
           <StyledStoryPageCameraGallaryLinks>
-            <p>Camera Roll</p>
-            <p>Screen Shots</p>
-            <p>Favorites</p>
-            <p>Holiday 2021</p>
-            <p>Camera Roll</p>
-            <p>Camera Roll</p>
-            <p>Camera Roll</p>
+            {galleryLinks.map((item, index) => (
+              <p key={index}> {item}</p>
+            ))}
           </StyledStoryPageCameraGallaryLinks>
-
           {posts.map(({ image, title }, id) => (
             <img src={image} alt={title} key={id} />
           ))}

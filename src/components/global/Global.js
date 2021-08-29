@@ -1,6 +1,10 @@
 import React from "react"
 import { RiSearchLine } from "react-icons/ri"
 import Layout from "../layout/Layout"
+import post1 from "../../assets/posts/post1.jpg"
+import post2 from "../../assets/posts/post2.jpg"
+import post3 from "../../assets/posts/post3.jpg"
+import { posts } from "../../data/data"
 import {
   StyledGlobalPageCt,
   StyledGlobalPageFirstContant,
@@ -10,10 +14,6 @@ import {
   StyledGlobalPageSecoundContant,
   StyledGlobalPageSecoundContantSinlgeItem,
 } from "./GlobalPageStyles"
-import post1 from "../../assets/posts/post1.jpg"
-import post2 from "../../assets/posts/post2.jpg"
-import post3 from "../../assets/posts/post3.jpg"
-import { posts } from "../../data/data"
 
 const Global = () => {
   return (

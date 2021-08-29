@@ -91,6 +91,7 @@ export const StyledStoryPageCameraGallaryLinks = styled.div`
   align-items: center;
   padding: 5px 0;
   color: #e0e0e0;
+
   & p {
     width: 110px;
     height: 20px;

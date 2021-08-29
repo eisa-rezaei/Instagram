@@ -1,7 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
-import { BsArrowLeft } from "react-icons/bs"
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
+
+// icons
+
+import { BsArrowLeft } from "react-icons/bs"
+import { MdLocationOn } from "react-icons/md"
+
+import { posts } from "../../data/data"
+
+// styled compnents
+
 import Layout from "../layout/Layout"
 import {
   StyledLocationPageContantTop,
@@ -12,12 +21,11 @@ import {
   StyledLocationPageSecoundContantSinlgeItem,
   StyledLocationPageSecoundContantToggle,
 } from "./LocationStyle"
-import { MdLocationOn } from "react-icons/md"
-import { posts } from "../../data/data"
+
+// component
 
 const Location = ({ post }) => {
-  const selectedPost = post[0]
-  const { location, position } = selectedPost
+  const { location, position } = post[0]
 
   return (
     <Layout>
