@@ -3,6 +3,8 @@
 </h1>
  
  THIS PAGE IN POWERED BY EISA REZAEI 
- <img src="./static/instagram.jpeg" width="200px" height="300px"  alt ="instagram"/>
+
 
 # Instagram
+
+<img src="./static/instagram.jpeg" width="500px" height="800px"  alt ="instagram"/>
