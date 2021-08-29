@@ -2,9 +2,8 @@
   Gatsby instagram page
 </h1>
  
- THIS PAGE IN POWERED BY EISA REZAEI 
-
+ THIS PAGE IN POWERED BY EISA REZAEI
 
 # Instagram
 
-<img src="./static/instagram.jpeg" width="500px" height="800px"  alt ="instagram"/>
+<img src="./static/instagram.jpeg" width="100%" height="800px"  alt ="instagram"/>
