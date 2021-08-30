@@ -12,7 +12,7 @@ import { RiAddCircleLine } from "react-icons/ri"
 // default data
 import userImage from "../../assets/avatars/user-image.png"
 import post1 from "../../assets/posts/post4.jpg"
-import post3 from "../../assets/posts/post5.jpeg"
+import post3 from "../../assets/posts/post5.jpg"
 import post2 from "../../assets/posts/post6.jpeg"
 
 import { highlights, posts } from "../../data/data"
@@ -31,6 +31,7 @@ import {
   StyledProfileUserInfoEditBtns,
   StyledProfileUserInfoFollowers,
 } from "./ProfileStyles"
+import { Link } from "gatsby"
 
 const Profile = ({ user }) => {
   const initialUser = {
@@ -45,9 +46,9 @@ const Profile = ({ user }) => {
     location: "Iran",
     highlights: highlights,
     userposts: [
-      { image: post1, id: 120942, title: "picture" },
-      { image: post2, id: 124345, title: "picture2" },
-      { image: post3, id: 234213, title: "picture3" },
+      { image: post1, id: 14, title: "picture" },
+      { image: post3, id: 15, title: "picture2" },
+      { image: post2, id: 16, title: "picture3" },
     ],
   }
 
@@ -146,7 +147,9 @@ const Profile = ({ user }) => {
           <StyledProfilePostsCtImages>
             {userData.userposts.map(({ image, id, title }) => (
               <StyledProfilePageSinlgePost key={id}>
-                <img src={image} alt={title} />
+                <Link to={`/posts/${id}`}>
+                  <img src={image} alt={title} />
+                </Link>
               </StyledProfilePageSinlgePost>
             ))}
           </StyledProfilePostsCtImages>

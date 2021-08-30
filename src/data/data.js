@@ -12,12 +12,13 @@ import avatar10 from "../assets/avatars/avatar10.png"
 import avatar11 from "../assets/avatars/avatar11.png"
 import avatar12 from "../assets/avatars/avatar12.png"
 import avatar13 from "../assets/avatars/avatar13.png"
+import adminDefualt from "../assets/avatars/user-image.png"
 
 import post1 from "../assets/posts/post1.jpg"
 import post2 from "../assets/posts/post2.jpg"
 import post3 from "../assets/posts/post3.jpg"
 import post4 from "../assets/posts/post4.jpg"
-import post5 from "../assets/posts/post5.jpeg"
+import post5 from "../assets/posts/post5.jpg"
 import post6 from "../assets/posts/post6.jpeg"
 import post7 from "../assets/posts/post7.jpg"
 import post8 from "../assets/posts/post8.jpg"
@@ -50,10 +51,12 @@ export const posts = [
     user: avatar1,
     location: "Iran, Ardabil",
     name: "nick",
-    likes: 2300,
+    likes: 21300,
     comments: 20,
     position: [37.505, 48.5],
     username: "nick.nnnn",
+    caption:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius maxime provident ut ratione eveniet dolores facilis quis saepe esse pariatur.",
   },
   {
     image: post2,
@@ -62,10 +65,12 @@ export const posts = [
     user: avatar2,
     location: "Iran, Tehran",
     name: "john",
-    likes: 1000,
+    likes: 23400,
     comments: 120,
     position: [35.505, 51.5],
     username: "john.hhhh",
+    caption:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam rem nobis impedit perferendis. Similique debitis tenetur fuga quae in quasi?",
   },
   {
     image: post7,
@@ -78,6 +83,8 @@ export const posts = [
     comments: 810,
     position: [37.505, 46.5],
     username: "mahsa.mmmm",
+    caption:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, consequuntur minima sint dolorum necessitatibus doloribus reprehenderit incidunt tenetur eos exercitationem!",
   },
   {
     image: post4,
@@ -90,6 +97,8 @@ export const posts = [
     comments: 310,
     position: [36.505, 47.5],
     username: "ali.aaaa",
+    caption:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, atque! Recusandae, ratione tempore deleniti magni quibusdam voluptas inventore accusantium sunt!",
   },
   {
     image: post4,
@@ -98,10 +107,12 @@ export const posts = [
     user: avatar2,
     location: "Iran, Tehran",
     name: "john",
-    likes: 1000,
+    likes: 12000,
     comments: 120,
     position: [35.505, 51.5],
     username: "john.hhhh",
+    caption:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi earum culpa corporis voluptatibus expedita quia!",
   },
   {
     image: post3,
@@ -114,6 +125,8 @@ export const posts = [
     comments: 1200,
     position: [37.505, 46.5],
     username: "mahsa.mmmm",
+    caption:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, labore!",
   },
   {
     image: post5,
@@ -122,10 +135,12 @@ export const posts = [
     user: avatar7,
     location: "Iran, Ardabil",
     name: "sara",
-    likes: 2300,
+    likes: 12300,
     comments: 20,
     position: [37.505, 48.5],
     username: "sara.ssss",
+    caption:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores iure ex asperiores ducimus fugiat, exercitationem dolorem ad reprehenderit omnis quam.",
   },
   {
     image: post2,
@@ -134,10 +149,12 @@ export const posts = [
     user: avatar5,
     location: "Iran, Tehran",
     name: "susan",
-    likes: 1000,
+    likes: 1500,
     comments: 120,
     position: [35.505, 51.5],
     username: "susan.ssss",
+    caption:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas odio molestias magni assumenda deleniti nihil aut, aperiam delectus.",
   },
   {
     image: post9,
@@ -146,10 +163,12 @@ export const posts = [
     user: avatar2,
     location: "Iran, Tehran",
     name: "john",
-    likes: 1000,
+    likes: 290,
     comments: 120,
     position: [35.505, 51.5],
     username: "john.jjjj",
+    caption:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, molestiae! Consectetur iusto maxime iure! Provident?",
   },
   {
     image: post6,
@@ -162,6 +181,8 @@ export const posts = [
     comments: 2300,
     position: [35.505, 51.5],
     username: "eisa.eeee",
+    caption:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil modi dolorem dignissimos blanditiis nulla veniam quo illo?",
   },
   {
     image: post7,
@@ -174,6 +195,8 @@ export const posts = [
     comments: 342,
     position: [35.505, 51.5],
     username: "fatemeh.ffff",
+    caption:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem repudiandae ad animi vero nesciunt est, modi incidunt veniam omnis eum cupiditate.",
   },
   {
     image: post8,
@@ -186,6 +209,8 @@ export const posts = [
     comments: 10,
     position: [35.505, 51.5],
     username: "alireza.aaaa",
+    caption:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci placeat quo vitae.",
   },
   {
     image: post5,
@@ -198,6 +223,50 @@ export const posts = [
     comments: 500,
     position: [37.505, 60.5],
     username: "elisa.eeee",
+    caption:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, sit.",
+  },
+  {
+    image: post4,
+    id: 14,
+    title: "post-img",
+    user: adminDefualt,
+    location: "Iran, Ardabil",
+    name: "eisa",
+    likes: 20345,
+    comments: 982,
+    position: [37.505, 48.5],
+    username: "eisa.rez",
+    caption:
+      "Lorem  dolor sit amet consectetur ipsum, adipisicing elit. Voluptates, sit.",
+  },
+  {
+    image: post5,
+    id: 15,
+    title: "post-img",
+    user: adminDefualt,
+    location: "Iran, Ardabil",
+    name: "eisa",
+    likes: 12340,
+    comments: 234,
+    position: [37.505, 48.5],
+    username: "eisa.rez",
+    caption:
+      "Lorem onsectetur, adipisicing elit. Voluptates,  consectetur, adipisicing elit. Voluptates, sit.",
+  },
+  {
+    image: post6,
+    id: 16,
+    title: "post-img",
+    user: adminDefualt,
+    location: "Iran, Ardabil",
+    name: "eisa",
+    likes: 999,
+    comments: 243,
+    position: [37.505, 48.5],
+    username: "eisa.rez",
+    caption:
+      "Lorem , adipisicing elit. Voluptates, sit ipsum dolor sit amet consectetur.",
   },
 ]
 export const highlights = [
@@ -316,6 +385,17 @@ export const users = [
     user_id: 9,
     bio: "hello my name is sara living in hamedan ",
     title: " student ",
+    highlights: highlights,
+  },
+  {
+    avatar: adminDefualt,
+    name: "eisa",
+    username: "eisa.rez",
+    followers: 632,
+    followings: 231,
+    user_id: 10,
+    bio: "hello my name is eisa living in Ardbil ",
+    title: " web Developer react  ",
     highlights: highlights,
   },
 ]

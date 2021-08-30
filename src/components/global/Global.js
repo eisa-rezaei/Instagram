@@ -1,10 +1,11 @@
 import React from "react"
+import { Link } from "gatsby"
+
 import { RiSearchLine } from "react-icons/ri"
-import Layout from "../layout/Layout"
-import post1 from "../../assets/posts/post1.jpg"
-import post2 from "../../assets/posts/post2.jpg"
-import post3 from "../../assets/posts/post3.jpg"
+
 import { posts } from "../../data/data"
+
+import Layout from "../layout/Layout"
 import {
   StyledGlobalPageCt,
   StyledGlobalPageFirstContant,
@@ -27,15 +28,23 @@ const Global = () => {
         </StyledGlobalPageHeader>
         <StyledGlobalPageFirstContant>
           <span>
-            <img src={post1} alt="post1" />
-            <img src={post2} alt="post2" />
+            <Link to="/posts/12">
+              <img src={posts[11].image} alt="post1" />
+            </Link>
+            <Link to="/posts/9">
+              <img src={posts[8].image} alt="post2" />
+            </Link>
           </span>
-          <img src={post3} alt="post3" />
+          <Link to="/posts/8">
+            <img src={posts[7].image} alt="post3" />
+          </Link>
         </StyledGlobalPageFirstContant>
         <StyledGlobalPageSecoundContant>
           {posts.map(({ image, id, title }) => (
             <StyledGlobalPageSecoundContantSinlgeItem key={id}>
-              <img src={image} alt={title} />
+              <Link to={`/posts/${id}`}>
+                <img src={image} alt={title} />
+              </Link>
             </StyledGlobalPageSecoundContantSinlgeItem>
           ))}
         </StyledGlobalPageSecoundContant>
