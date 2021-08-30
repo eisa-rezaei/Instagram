@@ -1,6 +1,6 @@
 import React from "react"
 import Location from "../../components/location/Location"
-import { posts } from "../../data/data"
+import { posts } from "src/data/data"
 
 const UserLocation = ({ params }) => {
   const id = parseInt(params.id)

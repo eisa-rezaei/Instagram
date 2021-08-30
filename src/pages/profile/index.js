@@ -1,7 +1,7 @@
 import React from "react"
 import { Router } from "@reach/router"
 import Profile from "../../components/profile/Profile"
-import UserProfile from "./[username]"
+import UserProfile from "./user"
 
 const Index = () => {
   return (

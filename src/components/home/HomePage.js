@@ -30,7 +30,7 @@ import {
 } from "./HomePageStyle"
 
 // data
-import { posts, stories } from "../../data/data"
+import { posts, stories } from "src/data/data"
 
 // static array of data
 const postOptions = [

@@ -1,6 +1,6 @@
 import React from "react"
 import { Router } from "@reach/router"
-import UserLocation from "./[id]"
+import UserLocation from "./location"
 import Location from "../../components/location/Location"
 
 const Index = () => {

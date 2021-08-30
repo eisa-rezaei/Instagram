@@ -2,7 +2,7 @@ import React from "react"
 import { Router } from "@reach/router"
 
 import PostPage from "../../components/PostPage"
-import UsePostsPage from "./[id]"
+import UsePostsPage from "./post"
 
 const Index = () => {
   return (
