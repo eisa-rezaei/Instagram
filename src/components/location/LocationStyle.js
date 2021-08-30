@@ -3,6 +3,7 @@ import styled from "styled-components"
 export const StyledLocationPageCt = styled.main`
   width: 100%;
   height: 100%;
+  padding-bottom: 60px;
   overflow: scroll;
   .leaflet-container {
     height: 30vh;
