@@ -7,6 +7,7 @@ export const StyledGlobalPageCt = styled.main`
   flex-direction: column;
   align-items: baseline;
   overflow-y: scroll;
+  padding-bottom: 60px;
 `
 
 //dispalying the search box
@@ -56,14 +57,16 @@ export const StyledGlobalPageFirstContant = styled.div`
     object-fit: fill;
   }
   & span {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2px;
-    & img {
-      width: 138px;
-      height: 129px;
-      object-fit: fill;
-      margin: 0 2px 2px 0;
+    a {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2px;
+      & img {
+        width: 138px;
+        height: 128px;
+        object-fit: fill;
+        margin: 0 2px 2px 0;
+      }
     }
   }
 `
