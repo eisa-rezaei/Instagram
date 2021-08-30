@@ -13,6 +13,7 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
+  "homepage": "https://eisa-rezaei.github.io/Instagram/",
   "dependencies": {
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.11.1",

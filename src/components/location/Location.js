@@ -65,7 +65,9 @@ const Location = ({ post }) => {
             .filter(post => post.location === location)
             .map(({ image, id, title }) => (
               <StyledLocationPageSecoundContantSinlgeItem key={id}>
-                <img src={image} alt={title} />
+                <Link to={`/posts/${id}`}>
+                  <img src={image} alt={title} />
+                </Link>
               </StyledLocationPageSecoundContantSinlgeItem>
             ))}
         </StyledLocationPageSecoundContant>
