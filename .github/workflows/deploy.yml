@@ -18,7 +18,7 @@ jobs:
       - name: Setup node 🎱
         uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
+          node-version: '14.15.4'
 
       - name: Install 🎢
         run: yarn install --force
