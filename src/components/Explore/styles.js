@@ -12,7 +12,7 @@ export const StyledGlobalPageCt = styled.main`
 
 // displaying the search box
 export const StyledGlobalPageHeader = styled.header`
-  width: 100%;
+  min-width: 100%;
   min-height: 60px;
   padding: 0 20px;
   position: sticky;

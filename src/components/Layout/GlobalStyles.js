@@ -43,4 +43,14 @@ export const LayoutCt = styled.section`
   background-color: #fff;
   position: relative;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 500px) {
+    width: 100%;
+    height: 98vh;
+    margin: 1vh auto;
+  }
+
+  @media (min-height: 1000px) {
+    width: 600px;
+  }
 `
