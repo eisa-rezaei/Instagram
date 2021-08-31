@@ -13,7 +13,7 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
-  "homepage": "http://http://demo3.i3o.ir/",
+  "homepage": "http://demo3.i3o.ir/",
   "dependencies": {
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.11.1",
