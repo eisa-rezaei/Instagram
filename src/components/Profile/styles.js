@@ -12,6 +12,7 @@ export const StyledProfilePageCt = styled.main`
   flex-direction: column;
   justify-content: baseline;
   text-transform: capitalize;
+  overflow-x: scroll;
 `
 
 export const StyledProfileHeader = styled.header`
@@ -164,7 +165,6 @@ export const StyledProfilePostsNav = styled.div`
 export const StyledProfilePostsCt = styled.div`
   width: 100%;
   height: auto;
-  overflow-x: scroll;
 `
 
 export const StyledProfilePostsCtImages = styled.div`
@@ -174,14 +174,14 @@ export const StyledProfilePostsCtImages = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: left;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 `
 export const StyledProfilePageSinglePost = styled.div`
-  width: 126px;
+  width: 33.33%;
   height: 127px;
   & img {
-    width: 120px;
+    width: 99%;
     height: 125px;
     margin: 0 2px 2px 0;
     object-fit: cover;

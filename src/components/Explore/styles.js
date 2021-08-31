@@ -52,21 +52,30 @@ export const StyledGlobalPageFirstContant = styled.div`
   flex-direction: row;
   align-items: flex-start;
   & img {
-    width: 300px;
+    width: 280px;
     height: 260px;
     object-fit: fill;
   }
   & span {
+    width: 33.33%;
     a {
       display: flex;
       flex-direction: column;
       margin-bottom: 2px;
       & img {
-        width: 138px;
+        width: 100%;
         height: 128px;
         object-fit: fill;
         margin: 0 2px 2px 0;
       }
+    }
+  }
+  @media (max-width: 600px) {
+    justify-content: space-between;
+    & img {
+      min-width: 185px;
+      height: 260px;
+      object-fit: fill;
     }
   }
 `
@@ -79,9 +88,10 @@ export const StyledGlobalPageSecoundContant = styled.div`
   flex-wrap: wrap;
 `
 export const StyledGlobalPageSecoundContantSinlgeItem = styled.div`
+  width: 33.333%;
   height: 127px;
   & img {
-    width: 138px;
+    width: 99%;
     height: 125px;
     margin: 0 2px 2px 0;
   }

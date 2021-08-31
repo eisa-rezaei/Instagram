@@ -17,7 +17,7 @@ export const StyledLikePageHeader = styled.header`
   border-bottom: 1px solid #d0d0d0;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 16px;
 `
 export const StyledLikePageContent = styled.div`
   width: 100%;
@@ -25,7 +25,7 @@ export const StyledLikePageContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px 20px;
+  padding: 10px 16px;
   & h3 {
     font-size: 1.1rem;
     font-weight: 600;
@@ -37,7 +37,7 @@ export const StyledLikePageContentHead = styled.div`
   flex-direction: row;
   border-bottom: 1px solid #d0d0d0;
   & span {
-    width: 80px;
+    width: 70px;
     height: 70px;
     margin: 15px;
     font-size: 2rem;
@@ -48,13 +48,21 @@ export const StyledLikePageContentHead = styled.div`
     align-items: center;
     justify-content: center;
   }
+
+  @media (max-width: 600px) {
+    & span {
+      width: 100px;
+      height: 70px;
+      margin: 10px;
+    }
+  }
 `
 export const StyledLikePageContentHeadInfo = styled.div`
-  font-size: 0.8rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 40px;
+  padding-right: 30px;
+  font-size: 0.8rem;
 `
 
 export const StyledLikePageContentListItem = styled.div`
@@ -64,20 +72,21 @@ export const StyledLikePageContentListItem = styled.div`
   flex-direction: row;
   align-items: center;
   & img {
-    background-color: lightcoral;
     min-width: 65px;
     height: 65px;
     border-radius: 50%;
     margin-right: 20px;
     object-fit: contain;
+    background-color: lightcoral;
   }
 `
 export const StyledLikePageListItemInfo = styled.div`
-  font-size: 0.8rem;
+  width: 80%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  font-size: 0.8rem;
   & p {
     width: 100%;
     padding-right: 10px;
@@ -87,7 +96,7 @@ export const StyledLikePageListItemInfo = styled.div`
   }
 `
 export const StyledLikePageListItemInfoButton = styled.button`
-  width: 150px;
+  width: 120px;
   height: 40px;
   color: #fff;
   background-color: #2f93f5;

@@ -13,6 +13,10 @@ export const StyledHomeCt = styled.main`
   flex-direction: column;
   justify-content: baseline;
   text-transform: capitalize;
+
+  @media (max-width: 600px) {
+    padding: 0.5rem;
+  }
 `
 export const StyledHomeHeader = styled.header`
   width: 100%;

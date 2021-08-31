@@ -44,10 +44,12 @@ export const LayoutCt = styled.section`
   position: relative;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     width: 100%;
-    height: 98vh;
-    margin: 1vh auto;
+    height: 100vh;
+    margin: 0;
+
+    border-radius: 0px;
   }
 
   @media (min-height: 1000px) {
