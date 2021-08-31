@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+
 import { BsArrowLeft, BsBookmark } from "react-icons/bs"
 import { BiDotsHorizontalRounded } from "react-icons/bi"
 import { RiHeartLine } from "react-icons/ri"
@@ -7,7 +8,7 @@ import { VscComment } from "react-icons/vsc"
 import { FiSend } from "react-icons/fi"
 
 import Layout from "../Layout"
-import { posts } from "../../data/data";
+import { posts } from "../../data/data"
 import {
   StyledPostCaption,
   StyledPostCt,
@@ -21,7 +22,7 @@ import {
   StyledPostPageHeader,
 } from "./styles"
 
-const postOptions = [
+const POST_OPTIONS = [
   "Report...",
   "Hide",
   "Turn on Post Notifications",
@@ -29,7 +30,7 @@ const postOptions = [
   "Share to",
 ]
 
-const PostPage = (props) => {
+const PostPage = props => {
   const post = posts.filter(post => post.id === parseInt(props.id))
 
   const { id, image, user, title, likes, caption, location, username, name } =
@@ -85,7 +86,7 @@ const PostPage = (props) => {
           </StyledPostCaption>
         </StyledPostCt>
         <StyledPostOptions postOptionIsOpen={postOptionIsOpen}>
-          {postOptions.map((item, index) => (
+          {POST_OPTIONS.map((item, index) => (
             <li
               aria-hidden="true"
               onClick={() => setPostOptionIsOpen(false)}

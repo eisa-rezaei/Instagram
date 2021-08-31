@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
+
 import { BsArrowLeft } from "react-icons/bs"
 import { MdLocationOn } from "react-icons/md"
 
@@ -17,8 +18,7 @@ import {
   StyledLocationPageSecoundContantToggle,
 } from "./styles"
 
-
-const Location = (props) => {
+const Location = props => {
   const post = posts.filter(post => post.id === parseInt(props.id))
 
   const { location, position } = post[0]

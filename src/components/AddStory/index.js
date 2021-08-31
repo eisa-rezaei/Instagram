@@ -25,7 +25,6 @@ const GALLERY_LINKS = [
   "jooo Roll",
 ]
 
-
 const AddStory = () => {
   const videoRef = useRef(null)
   const photoRef = useRef(null)
@@ -39,7 +38,7 @@ const AddStory = () => {
         video.srcObject = streem
         video.play()
       })
-      .catch(err => console.log(err))
+      .catch(err => console.log("error massage :", err))
   }
 
   useEffect(() => {

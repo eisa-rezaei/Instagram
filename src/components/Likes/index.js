@@ -34,7 +34,7 @@ const Likes = () => {
               <img src={user} alt={name} />
               <StyledLikePageListItemInfo>
                 <p>
-                  <span> {name}</span> started to following you .
+                  <span>{name}</span> started to following you.
                 </p>
                 <StyledLikePageListItemInfoButton>
                   Follow

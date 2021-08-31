@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 
-// icons
-
 import { BsArrowRight } from "react-icons/bs"
 import { AiOutlineCamera, AiOutlineClose } from "react-icons/ai"
 import { IoMdCopy } from "react-icons/io"
@@ -18,7 +16,6 @@ import {
   StyledImgList,
   StyledImgLocation,
 } from "./styles"
-
 
 const AddPost = () => {
   const [currentImg, setCurrentImg] = useState(1)

@@ -284,7 +284,7 @@ export const users = [
     followers: 7300,
     followings: 1103,
     user_id: 1,
-    bio: "Hello my name is Nick ",
+    bio: "Hello my name is Nick And I am From Some where",
     title: " web prgrammer",
     highlights: highlights,
   },
