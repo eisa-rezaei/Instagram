@@ -64,8 +64,12 @@ export const StyledLikePageContentListItem = styled.div`
   flex-direction: row;
   align-items: center;
   & img {
+    background-color: lightcoral;
+    min-width: 65px;
+    height: 65px;
     border-radius: 50%;
     margin-right: 20px;
+    object-fit: contain;
   }
 `
 export const StyledLikePageListItemInfo = styled.div`
