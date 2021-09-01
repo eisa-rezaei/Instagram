@@ -4,7 +4,7 @@ import { FiArrowUpRight } from "react-icons/fi"
 
 import Activities from "./components/Activities"
 
-import { posts } from "../../data/data"
+import { users } from "../../data/data"
 
 import Layout from "../Layout"
 import {
@@ -26,13 +26,13 @@ const Likes = () => {
           </span>
           <StyledLikePageContentHeadInfo>
             <h1>Promotions</h1>
-            <p> Recent actions from your Activities.</p>
+            <p>Recent actions from your Activities.</p>
           </StyledLikePageContentHeadInfo>
         </StyledLikePageContentHead>
         <StyledLikePageContent>
           <h3>Yesterday</h3>
-          {posts.map(post => (
-            <Activities key={post.id} {...post} />
+          {users.map(user => (
+            <Activities key={user.user_id} {...user} />
           ))}
         </StyledLikePageContent>
       </StyledLikePageCt>

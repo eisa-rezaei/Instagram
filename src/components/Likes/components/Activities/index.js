@@ -6,12 +6,12 @@ import {
   StyledLikePageListItemInfoButton,
 } from "./styles"
 
-const Index = ({ user, username }) => {
+const Index = ({ username, avatar }) => {
   const [isFollowing, setIsFollowed] = useState(false)
   return (
     <StyledLikePageContentListItem>
       <Link to={`/profile/${username}`}>
-        <img src={user} alt={username} />
+        <img src={avatar} alt={username} />
       </Link>
       <StyledLikePageListItemInfo>
         <p>
