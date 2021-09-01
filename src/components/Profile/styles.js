@@ -118,6 +118,7 @@ export const StyledProfileHighlights = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  justify-content: flex-start;
   margin: 15px auto;
 `
 export const StyledProfileHighlight = styled.div`
