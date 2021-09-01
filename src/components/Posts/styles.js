@@ -36,7 +36,7 @@ export const StyledPostPageHeader = styled.header`
   align-items: center;
   font-size: 2rem;
   border-bottom: 1px solid #d0d0d0;
-  & a {
+  & span {
     display: flex;
     align-items: center;
     margin-right: 50px;

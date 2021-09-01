@@ -7,6 +7,7 @@ export const StyledGlobalPageCt = styled.main`
   flex-direction: column;
   align-items: baseline;
   overflow-y: scroll;
+  overflow-x: hidden;
   padding-bottom: 60px;
 `
 

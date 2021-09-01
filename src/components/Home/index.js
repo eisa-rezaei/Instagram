@@ -1,10 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 
-// icons
-import { RiAddCircleLine } from "react-icons/ri"
-import { FaRegComment } from "react-icons/fa"
-import { RiHeartLine } from "react-icons/ri"
 import { MdAdd } from "react-icons/md"
 
 import SinglePsot from "./components/SinglePost"
@@ -23,6 +19,7 @@ import {
   StyledHomeStory,
   StyledHomeUserStory,
 } from "./styles"
+import { FiSend } from "react-icons/fi"
 
 const POST_OPTIONS = [
   "Report...",
@@ -37,7 +34,6 @@ const HomePage = () => {
   const togglePostOptionHandler = () => {
     setPostOptionIsOpen(!postOptionIsOpen)
   }
-
   return (
     <Layout>
       <StyledHomeCt>
@@ -48,9 +44,8 @@ const HomePage = () => {
         <StyledHomeHeader>
           <span>Instagram</span>
           <StyledHomeHeaderIcons>
-            <RiAddCircleLine />
-            <FaRegComment />
-            <RiHeartLine />
+            <FiSend />
+            <Link to="/addstory">1</Link>
           </StyledHomeHeaderIcons>
         </StyledHomeHeader>
         <StyledHomeStories>

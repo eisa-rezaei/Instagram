@@ -41,9 +41,21 @@ export const StyledHomeHeader = styled.header`
   }
 `
 export const StyledHomeHeaderIcons = styled.div`
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  & a {
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    font-size: 0.6rem;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #2f93f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `
 
 export const StyledHomeStories = styled.div`

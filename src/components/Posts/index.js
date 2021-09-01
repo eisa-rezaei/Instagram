@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { navigate } from "@reach/router"
 import { Link } from "gatsby"
 
 import { BsArrowLeft, BsBookmark } from "react-icons/bs"
@@ -42,6 +43,7 @@ const PostPage = props => {
     setPostOptionIsOpen(!postOptionIsOpen)
   }
   const [isLiked, setIsLiked] = useState(false)
+
   return (
     <Layout>
       <StyledPostPageCt>
@@ -50,9 +52,9 @@ const PostPage = props => {
           postOptionIsOpen={postOptionIsOpen}
         />
         <StyledPostPageHeader>
-          <Link to="/">
+          <span onClick={() => navigate(-1)} aria-hidden="true">
             <BsArrowLeft />
-          </Link>
+          </span>
           <h5>Explorer</h5>
         </StyledPostPageHeader>
         <StyledPostCt>
