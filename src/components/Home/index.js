@@ -45,7 +45,7 @@ const HomePage = () => {
           <span>Instagram</span>
           <StyledHomeHeaderIcons>
             <FiSend />
-            <Link to="/addstory">1</Link>
+            <Link to="/">1</Link>
           </StyledHomeHeaderIcons>
         </StyledHomeHeader>
         <StyledHomeStories>

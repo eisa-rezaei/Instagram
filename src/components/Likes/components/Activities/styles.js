@@ -7,7 +7,7 @@ export const StyledLikePageContentListItem = styled.div`
   flex-direction: row;
   align-items: center;
   & img {
-    min-width: 65px;
+    width: 65px;
     height: 65px;
     border-radius: 50%;
     margin-right: 20px;
@@ -18,9 +18,15 @@ export const StyledLikePageContentListItem = styled.div`
       border: 2px solid orange;
     }
   }
+  @media (max-width: 600px) {
+    & img {
+      width: 55px;
+      height: 55px;
+    }
+  }
 `
 export const StyledLikePageListItemInfo = styled.div`
-  width: 80%;
+  min-width: 75%;
   display: flex;
   flex-direction: row;
   align-items: center;

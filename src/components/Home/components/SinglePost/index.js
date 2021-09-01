@@ -53,7 +53,6 @@ const Index = ({
           <AiFillHeart />
         </StyledHomeSinglePostHeartAnimation>
       </StyledHomeSinglePostImgCt>
-
       <StyledHomeSinglePostLikesCommentsBox isLiked={isLiked}>
         <span>
           {isLiked ? (

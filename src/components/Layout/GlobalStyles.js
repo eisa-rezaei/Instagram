@@ -29,6 +29,12 @@ export const GlobalStyles = createGlobalStyle`
     background-color: inherit;
     cursor: pointer;
   }
+  @media (max-width: 600px) {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
 `
 export const LayoutCt = styled.section`
   width: 420px;

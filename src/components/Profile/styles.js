@@ -17,7 +17,8 @@ export const StyledProfilePageContent = styled.div`
   flex-direction: column;
   justify-content: baseline;
   text-transform: capitalize;
-  overflow-x: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 `
 
 export const StyledProfileHeader = styled.header`
@@ -30,7 +31,7 @@ export const StyledProfileHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid #d0d0d0;
-  margin: 10px 0;
+  margin-bottom: 10px;
   & p {
     font-weight: bold;
   }
@@ -78,6 +79,14 @@ export const StyledProfileImageCt = styled.div`
     align-items: center;
     cursor: pointer;
   }
+  @media (max-width: 600px) {
+    width: 70px;
+    height: 70px;
+    & img {
+      width: 70px;
+      height: 70px;
+    }
+  }
 `
 export const StyledProfileUserInfoFollowers = styled.div`
   width: 70%;
@@ -97,6 +106,9 @@ export const StyledProfileUserInfoFollowers = styled.div`
       margin-top: 5px;
       font-size: 0.7rem;
     }
+  }
+  @media (max-width: 600px) {
+    margin-left: 15px;
   }
 `
 export const StyledProfileUserInfoBio = styled.div`
@@ -147,7 +159,6 @@ export const StyledProfileHighlights = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  justify-content: flex-start;
 `
 export const StyledProfileHighlight = styled.div`
   width: 120px;
@@ -173,6 +184,18 @@ export const StyledProfileHighlight = styled.div`
     border-radius: 50%;
     cursor: pointer;
     border: ${props => (props.color ? `none` : `1px solid #d0d0d0`)};
+  }
+  @media (max-width: 600px) {
+    width: 110px;
+    margin-right: 5px;
+    & p {
+      font-size: 0.5rem;
+    }
+    & span {
+      width: 45px;
+      height: 45px;
+      font-size: 1.2rem;
+    }
   }
 `
 export const StyledProfilePostsNav = styled.div`
@@ -221,7 +244,7 @@ export const StyledProfilePageSinglePost = styled.div`
 
 export const StyledProfileSideBar = styled.ul`
   width: 100%;
-  height: auto;
+  height: 80%;
   ${props =>
     props.isSetteingOpen
       ? ` transform: translateY(0%);`
@@ -242,7 +265,7 @@ export const StyledProfileSideBar = styled.ul`
   & li {
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 15px;
     transition: all 0.15s linear;
     display: flex;
     flex-direction: row;

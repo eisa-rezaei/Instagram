@@ -7,11 +7,12 @@ export const StyledLikePageCt = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem 0;
   padding-bottom: 60px;
 `
 export const StyledLikePageHeader = styled.header`
   width: 100%;
-  min-height: 70px;
+  min-height: 50px;
   font-size: 1.3rem;
   font-weight: 700;
   border-bottom: 1px solid #d0d0d0;

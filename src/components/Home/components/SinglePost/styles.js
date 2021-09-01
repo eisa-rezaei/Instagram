@@ -68,6 +68,8 @@ export const StyledHomeSinglePostHeadDetails = styled.div`
       height: 50px;
       border-radius: 50%;
       cursor: pointer;
+      background-color: royalblue;
+      transition: all 0.15s linear;
       :hover {
         border: 1px solid orange;
       }
@@ -145,8 +147,8 @@ export const StyledHomeSinglePostImgCt = styled.div`
 export const StyledHomeSinglePostHeartAnimation = styled.div`
   width: 150px;
   height: 150px;
-  top: 150px;
-  left: 120px;
+  top: 30%;
+  left: 30%;
   display: flex;
   align-items: center;
   justify-content: center;

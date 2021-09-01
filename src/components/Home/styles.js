@@ -45,19 +45,18 @@ export const StyledHomeHeaderIcons = styled.div`
   & a {
     width: 20px;
     height: 20px;
-    bottom: 0;
-    right: 0;
+    top: -5px;
+    right: -5px;
     position: absolute;
     font-size: 0.6rem;
     border-radius: 50%;
     color: #fff;
-    background-color: #2f93f5;
+    background-color: #ff6666;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 `
-
 export const StyledHomeStories = styled.div`
   width: 200%;
   height: 120px;
