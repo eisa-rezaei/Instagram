@@ -64,7 +64,7 @@ const Index = ({
           )}
           {isLiked
             ? likes >= 1000
-              ? `${likes / 1000 + 1}k`
+              ? `${(likes + 1) / 1000}k`
               : likes + 1
             : likes >= 1000
             ? `${likes / 1000}k`
