@@ -7,14 +7,15 @@ export const StyledGlobalPageCt = styled.main`
   flex-direction: column;
   align-items: baseline;
   overflow-y: scroll;
+  overflow-x: hidden;
   padding-bottom: 60px;
 `
 
 // displaying the search box
 export const StyledGlobalPageHeader = styled.header`
   min-width: 100%;
-  min-height: 60px;
-  padding: 0 20px;
+  min-height: 70px;
+  padding: 20px;
   position: sticky;
   top: 0;
   background-color: #fff;
@@ -72,10 +73,12 @@ export const StyledGlobalPageFirstContant = styled.div`
   }
   @media (max-width: 600px) {
     justify-content: space-between;
-    & img {
-      min-width: 185px;
-      height: 260px;
-      object-fit: fill;
+    & span {
+      & img {
+        min-width: 120px;
+        height: 260px;
+        object-fit: fill;
+      }
     }
   }
 `

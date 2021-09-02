@@ -1,9 +1,9 @@
 import React, { useState } from "react"
+import { navigate } from "@reach/router"
 import { Link } from "gatsby"
 
 import { BsArrowLeft, BsBookmark } from "react-icons/bs"
 import { BiDotsHorizontalRounded } from "react-icons/bi"
-import { RiHeartLine } from "react-icons/ri"
 import { VscComment } from "react-icons/vsc"
 import { FiSend } from "react-icons/fi"
 
@@ -15,12 +15,15 @@ import {
   StyledPostHeadDetails,
   StyledPostHeadDetailsUserInfo,
   StyledPostHeader,
+  StyledPostHeartAnimation,
   StyledPostIconsBar,
+  StyledPostImgCt,
   StyledPostOptions,
   StyledPostOptionShade,
   StyledPostPageCt,
   StyledPostPageHeader,
 } from "./styles"
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai"
 
 const POST_OPTIONS = [
   "Report...",
@@ -39,6 +42,8 @@ const PostPage = props => {
   const togglePostOptionHandler = () => {
     setPostOptionIsOpen(!postOptionIsOpen)
   }
+  const [isLiked, setIsLiked] = useState(false)
+
   return (
     <Layout>
       <StyledPostPageCt>
@@ -47,9 +52,9 @@ const PostPage = props => {
           postOptionIsOpen={postOptionIsOpen}
         />
         <StyledPostPageHeader>
-          <Link to="/">
+          <span onClick={() => navigate(-1)} aria-hidden="true">
             <BsArrowLeft />
-          </Link>
+          </span>
           <h5>Explorer</h5>
         </StyledPostPageHeader>
         <StyledPostCt>
@@ -69,17 +74,27 @@ const PostPage = props => {
             </StyledPostHeadDetails>
             <BiDotsHorizontalRounded onClick={togglePostOptionHandler} />
           </StyledPostHeader>
-          <img src={image} alt={title} />
-          <StyledPostIconsBar>
+          <StyledPostImgCt onDoubleClick={() => setIsLiked(!isLiked)}>
+            <img src={image} alt={title} />
+            <StyledPostHeartAnimation isLiked={isLiked}>
+              <AiFillHeart />
+            </StyledPostHeartAnimation>
+          </StyledPostImgCt>
+
+          <StyledPostIconsBar isLiked={isLiked}>
             <span>
-              <RiHeartLine />
+              {isLiked ? (
+                <AiFillHeart onClick={() => setIsLiked(!isLiked)} />
+              ) : (
+                <AiOutlineHeart onClick={() => setIsLiked(!isLiked)} />
+              )}
               <VscComment />
               <FiSend />
             </span>
             <BsBookmark />
           </StyledPostIconsBar>
           <StyledPostCaption>
-            <h4>{likes} likes</h4>
+            <h4>{isLiked ? likes + 1 : likes} likes</h4>
             <p>
               <Link to={`/profile/${username}`}>{username}</Link> {caption}
             </p>

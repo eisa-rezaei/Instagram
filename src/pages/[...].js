@@ -1,14 +1,14 @@
 import React from "react"
-import { Router,Location } from "@reach/router"
+import { Router, Location } from "@reach/router"
 
 import Home from "../components/Home"
 import Likes from "../components/Likes"
 import AddStory from "../components/AddStory"
 import AddPost from "../components/AddPost"
 import Explore from "../components/Explore"
-import UserLocation from "../components/Location";
-import Post from "../components/Posts";
-import Profile from "../components/Profile";
+import UserLocation from "../components/Location"
+import Post from "../components/Posts"
+import Profile from "../components/Profile"
 
 const App = () => (
   <Location>
@@ -26,6 +26,6 @@ const App = () => (
       </Router>
     )}
   </Location>
-);
+)
 
 export default App

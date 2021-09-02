@@ -1,4 +1,23 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+
+const like = keyframes`
+0%{
+      visibility: visible; 
+        font-size : 4rem
+}
+30%{
+      visibility: visible; 
+        font-size : 6rem;
+}
+60%{
+      visibility: visible; 
+        font-size : 5rem;
+}
+100%{
+      visibility: hidden; 
+        font-size : 5rem;
+}
+`
 
 export const StyledPostPageCt = styled.main`
   width: 100%;
@@ -17,7 +36,7 @@ export const StyledPostPageHeader = styled.header`
   align-items: center;
   font-size: 2rem;
   border-bottom: 1px solid #d0d0d0;
-  & a {
+  & span {
     display: flex;
     align-items: center;
     margin-right: 50px;
@@ -126,6 +145,11 @@ export const StyledPostIconsBar = styled.div`
     width: 120px;
     display: flex;
     justify-content: space-between;
+    ${props =>
+      props.isLiked &&
+      `svg:first-child {
+      color: red;
+    }`}
   }
 `
 
@@ -195,4 +219,31 @@ export const StyledPostOptionShade = styled.div`
   z-index: 2;
   background-color: #00000050;
   ${props => (props.postOptionIsOpen ? `display:block` : `display:none;`)}
+`
+
+export const StyledPostImgCt = styled.div`
+  width: 100%;
+  height: 400px;
+  position: relative;
+  & img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+`
+export const StyledPostHeartAnimation = styled.div`
+  width: 150px;
+  height: 150px;
+  top: 130px;
+  left: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  visibility: hidden;
+  animation: ${props => (props.isLiked ? like : null)} 1s ease;
+  z-index: 2;
+  & svg {
+    color: #fff;
+  }
 `

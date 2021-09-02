@@ -9,16 +9,10 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Cache  💾
-        uses: actions/cache@v2
-        with:
-          path: ${{ github.workspace }}/.cache
-          key: ${{ runner.os }}-cache-${{ hashFiles('**/package-lock.json') }}
-
       - name: Setup node 🎱
         uses: actions/setup-node@v2
         with:
-          node-version: '14.15.4'
+          node-version: "14.15.4"
 
       - name: Install 🎢
         run: yarn install --force

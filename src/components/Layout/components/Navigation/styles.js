@@ -13,7 +13,6 @@ export const NavContainer = styled.div`
   position: absolute;
   bottom: 0;
   z-index: 4;
-
   .active-link {
     color: orange;
   }

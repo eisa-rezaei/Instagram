@@ -14,6 +14,8 @@ import avatar12 from "../assets/avatars/avatar12.png"
 import avatar13 from "../assets/avatars/avatar13.png"
 import adminDefualt from "../assets/avatars/user-image.png"
 
+import userImage from "../assets/avatars/user-image.png"
+
 import post1 from "../assets/posts/post1.jpg"
 import post2 from "../assets/posts/post2.jpg"
 import post3 from "../assets/posts/post3.jpg"
@@ -26,6 +28,16 @@ import post9 from "../assets/posts/post9.jpg"
 
 import { FaBehance, FaDribbble, FaPinterestP } from "react-icons/fa"
 import { ImSpoonKnife } from "react-icons/im"
+import { FiSettings } from "react-icons/fi"
+import { BiArchiveIn } from "react-icons/bi"
+import { CgInsights } from "react-icons/cg"
+import {
+  BsClockHistory,
+  BsFillPersonPlusFill,
+  BsListCheck,
+} from "react-icons/bs"
+import { RiBookmarkFill, RiMentalHealthLine } from "react-icons/ri"
+import { AiOutlineQrcode } from "react-icons/ai"
 
 export const stories = [
   { name: "nick", image: avatar1 },
@@ -276,6 +288,24 @@ export const highlights = [
   { icon: <ImSpoonKnife />, title: "spoon", color: "#6734e1", id: 4 },
 ]
 
+export const initialUser = {
+  avatar: userImage,
+  name: "Eisa Reazaei",
+  title: "front end web developer",
+  bio: "front end react web developer living in Iran country  *** THIS IS DEFAULT ***",
+  username: "eisa.rez",
+  followers: 675,
+  followings: 452,
+  posts: 6,
+  location: "Iran",
+  highlights: highlights,
+  userposts: [
+    { image: post4, id: 14, title: "picture" },
+    { image: post5, id: 15, title: "picture2" },
+    { image: post6, id: 16, title: "picture3" },
+  ],
+}
+
 export const users = [
   {
     avatar: avatar1,
@@ -382,7 +412,7 @@ export const users = [
     username: "sara.ssss",
     followers: 204,
     followings: 1134,
-    user_id: 9,
+    user_id: 10,
     bio: "Hello my name is Sara living in Hamadan ",
     title: " student ",
     highlights: highlights,
@@ -393,9 +423,20 @@ export const users = [
     username: "eisa.rez",
     followers: 632,
     followings: 231,
-    user_id: 10,
+    user_id: 11,
     bio: "Hello my name is Eisa living in Ardabil ",
     title: " web Developer react  ",
     highlights: highlights,
   },
+]
+export const SETTING_LIST = [
+  { title: "Setting", icon: <FiSettings /> },
+  { title: "Archives", icon: <BiArchiveIn /> },
+  { title: "Insights", icon: <CgInsights /> },
+  { title: "Your Activity", icon: <BsClockHistory /> },
+  { title: "Qr Code", icon: <AiOutlineQrcode /> },
+  { title: "Saved", icon: <RiBookmarkFill /> },
+  { title: "Close Friends", icon: <BsListCheck /> },
+  { title: "Discover People", icon: <BsFillPersonPlusFill /> },
+  { title: "Covid 19 information center", icon: <RiMentalHealthLine /> },
 ]

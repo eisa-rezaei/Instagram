@@ -1,14 +1,9 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 
-// icons
-import { RiAddCircleLine } from "react-icons/ri"
-import { FaRegCommentDots, FaRegComment } from "react-icons/fa"
-import { RiHeartLine } from "react-icons/ri"
 import { MdAdd } from "react-icons/md"
-import { BiDotsVerticalRounded } from "react-icons/bi"
-import { AiOutlineHeart } from "react-icons/ai"
-import { BsBookmark } from "react-icons/bs"
+
+import SinglePsot from "./components/SinglePost"
 
 // styled components
 import Layout from "../Layout"
@@ -19,16 +14,12 @@ import {
   StyledHomeHeaderIcons,
   StyledHomePosts,
   StyledHomeShade,
-  StyledHomeSinglePost,
-  StyledHomeSinglePostHead,
-  StyledHomeSinglePostHeadDetails,
-  StyledHomeSinglePostHeadDetailsUserInfo,
-  StyledHomeSinglePostLikesCommentsBox,
   StyledHomeSinglePostPostOption,
   StyledHomeStories,
   StyledHomeStory,
   StyledHomeUserStory,
 } from "./styles"
+import { FiSend } from "react-icons/fi"
 
 const POST_OPTIONS = [
   "Report...",
@@ -40,10 +31,9 @@ const POST_OPTIONS = [
 
 const HomePage = () => {
   const [postOptionIsOpen, setPostOptionIsOpen] = useState(false)
-  const togglePostOptionHandler = id => () => {
+  const togglePostOptionHandler = () => {
     setPostOptionIsOpen(!postOptionIsOpen)
   }
-
   return (
     <Layout>
       <StyledHomeCt>
@@ -54,9 +44,8 @@ const HomePage = () => {
         <StyledHomeHeader>
           <span>Instagram</span>
           <StyledHomeHeaderIcons>
-            <RiAddCircleLine />
-            <FaRegComment />
-            <RiHeartLine />
+            <FiSend />
+            <Link to="/">1</Link>
           </StyledHomeHeaderIcons>
         </StyledHomeHeader>
         <StyledHomeStories>
@@ -78,52 +67,13 @@ const HomePage = () => {
           ))}
         </StyledHomeStories>
         <StyledHomePosts>
-          {posts.map(
-            ({
-              image,
-              id,
-              title,
-              user,
-              location,
-              name,
-              likes,
-              comments,
-              username,
-            }) => (
-              <StyledHomeSinglePost key={id}>
-                <StyledHomeSinglePostHead>
-                  <StyledHomeSinglePostHeadDetails>
-                    <Link to={`/profile/${username}`}>
-                      <img src={user} alt={name} />
-                    </Link>
-                    <StyledHomeSinglePostHeadDetailsUserInfo>
-                      <Link to={`/profile/${username}`}>
-                        <h5>{name}</h5>
-                      </Link>
-                      <Link to={`/location/${id}`}>
-                        <p>{location}</p>
-                      </Link>
-                    </StyledHomeSinglePostHeadDetailsUserInfo>
-                  </StyledHomeSinglePostHeadDetails>
-                  <BiDotsVerticalRounded onClick={togglePostOptionHandler()} />
-                </StyledHomeSinglePostHead>
-                <StyledHomeSinglePostLikesCommentsBox>
-                  <span>
-                    <AiOutlineHeart />
-                    {likes >= 1000 ? `${likes / 1000}k` : likes}
-                  </span>
-                  <span>
-                    <FaRegCommentDots />
-                    {comments >= 1000 ? `${comments / 1000}k` : comments}
-                  </span>
-                  <span>
-                    <BsBookmark />
-                  </span>
-                </StyledHomeSinglePostLikesCommentsBox>
-                <img src={image} alt={title} />
-              </StyledHomeSinglePost>
-            )
-          )}
+          {posts.map(post => (
+            <SinglePsot
+              key={post.id}
+              {...post}
+              togglePostOptionHandler={togglePostOptionHandler}
+            />
+          ))}
         </StyledHomePosts>
         <StyledHomeSinglePostPostOption postOptionIsOpen={postOptionIsOpen}>
           {POST_OPTIONS.map((item, index) => (

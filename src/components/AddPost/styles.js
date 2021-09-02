@@ -7,13 +7,13 @@ export const StyledAddPostCt = styled.main`
   flex-direction: column;
   justify-content: baseline;
   overflow: scroll;
+  padding: 1rem 0;
 `
 
 export const StyledHeader = styled.header`
   width: 100%;
-  height: 60px;
+  min-height: 50px;
   padding: 0 20px;
-  margin-top: 20px;
   font-size: 1.5rem;
   display: flex;
   flex-direction: row;
