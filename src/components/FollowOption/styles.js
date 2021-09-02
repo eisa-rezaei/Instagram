@@ -91,3 +91,40 @@ export const StyledUsersListCt = styled.ul`
     margin: 5px 0;
   }
 `
+
+export const StyledFollowOptionPopUp = styled.div`
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 5;
+  background-color: #00000050;
+  ${props => (props.isPopUpOpen ? `display:flex;` : `display:none;`)}
+  align-items: center;
+  justify-content: center;
+  & ul {
+    width: 70%;
+    height: 15vh;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    & li {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      font-size: 0.8rem;
+      transition: all 0.15s linear;
+      :hover {
+        background-color: #f0f0f0;
+        cursor: pointer;
+      }
+    }
+  }
+`

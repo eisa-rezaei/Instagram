@@ -4,10 +4,13 @@ import {
   StyledFollowPageListItemInfo,
   StyledFollowPageContentListItem,
   StyledFollowPageListItemInfoButton,
+  StyledFollowPageShadeToggle,
 } from "./styles"
+import { BiDotsVerticalRounded } from "react-icons/bi"
 
-const Index = ({ username, avatar, name }) => {
+const Index = ({ username, avatar, name, setIsPopUpOpen }) => {
   const [isFollowing, setIsFollowed] = useState(true)
+
   return (
     <StyledFollowPageContentListItem>
       <Link to={`/profile/${username}`}>
@@ -27,6 +30,12 @@ const Index = ({ username, avatar, name }) => {
         >
           {isFollowing ? ` Following ` : `Follow`}
         </StyledFollowPageListItemInfoButton>
+        <StyledFollowPageShadeToggle
+          onClick={() => setIsPopUpOpen(true)}
+          aria-hidden="true"
+        >
+          <BiDotsVerticalRounded />
+        </StyledFollowPageShadeToggle>
       </StyledFollowPageListItemInfo>
     </StyledFollowPageContentListItem>
   )

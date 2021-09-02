@@ -25,7 +25,7 @@ export const StyledProfileHeader = styled.header`
   width: 100%;
   height: 50px;
   padding: 0 1rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   display: flex;
   flex-direction: row;
   align-items: center;

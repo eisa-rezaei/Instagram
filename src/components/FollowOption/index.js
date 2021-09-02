@@ -9,6 +9,7 @@ import {
   StyledFollowOptionInput,
   StyledFollowOptionPageCt,
   StyledFollowOptionSearchBox,
+  StyledFollowOptionPopUp,
   StyledFollowOptionTogglePagesBar,
   StyledUsersListCt,
 } from "./styles"
@@ -18,11 +19,21 @@ import { RiSearchLine } from "react-icons/ri"
 const Index = ({ username }) => {
   const [isFollowingPage, setisFollowingPage] = useState(true)
   const [inputValue, setInputValue] = useState("")
+  const [isPopUpOpen, setIsPopUpOpen] = useState(false)
   const user = users.filter(user => user.username === username)[0]
-  console.log(inputValue)
+
   return (
     <Layout>
       <StyledFollowOptionPageCt>
+        <StyledFollowOptionPopUp
+          onClick={() => setIsPopUpOpen(false)}
+          isPopUpOpen={isPopUpOpen}
+        >
+          <ul>
+            <li>manage Notifications</li>
+            <li>mute</li>
+          </ul>
+        </StyledFollowOptionPopUp>
         <StyledFollowOptionHeader>
           <span onClick={() => navigate(-1)} aria-hidden="true">
             <BsArrowLeft />
@@ -62,7 +73,11 @@ const Index = ({ username }) => {
                 }
               })
               .map(user => (
-                <FollowOption {...user} key={user.user_id} />
+                <FollowOption
+                  {...user}
+                  key={user.user_id}
+                  setIsPopUpOpen={setIsPopUpOpen}
+                />
               ))}
           </StyledUsersListCt>
         ) : (
@@ -86,6 +101,7 @@ const Index = ({ username }) => {
                   {...user}
                   key={user.user_id}
                   isFollowingPage={isFollowingPage}
+                  setIsPopUpOpen={setIsPopUpOpen}
                 />
               ))}
           </StyledUsersListCt>

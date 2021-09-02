@@ -60,3 +60,7 @@ export const StyledFollowPageListItemInfoButton = styled.button`
     border: none;
   }
 `
+export const StyledFollowPageShadeToggle = styled.button`
+  width: 50px;
+  font-size: 1rem;
+`
