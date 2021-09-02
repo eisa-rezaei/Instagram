@@ -32,6 +32,7 @@ import {
 
 const Profile = ({ username }) => {
   const [isSetteingOpen, setIsSetteingOpen] = useState(false)
+  const [isPostGrid, setIsPostGrid] = useState(true)
 
   const user = users.filter(user => user.username === username)
 
@@ -83,23 +84,23 @@ const Profile = ({ username }) => {
                 <p>posts</p>
               </span>
               <BsThreeDotsVertical />
-              <span>
+              <Link to={`/follow-option/${username}`}>
                 <h6>
-                  {userData.followers >= 1000
-                    ? `${userData.followers / 1000}k`
-                    : userData.followers}
+                  {userData.followers.length >= 1000
+                    ? `${userData.followers.length / 1000}k`
+                    : userData.followers.length}
                 </h6>
                 <p>followers</p>
-              </span>
+              </Link>
               <BsThreeDotsVertical />
-              <span>
+              <Link to={`/follow-option/${username}`}>
                 <h6>
-                  {userData.followings >= 1000
-                    ? `${userData.followings / 1000}k`
-                    : userData.followings}
+                  {userData.followings.length >= 1000
+                    ? `${userData.followings.length / 1000}k`
+                    : userData.followings.length}
                 </h6>
                 <p> following</p>
-              </span>
+              </Link>
             </StyledProfileUserInfoFollowers>
           </StyledProfileUserInfo>
           <StyledProfileUserInfoBio>
@@ -128,25 +129,27 @@ const Profile = ({ username }) => {
               </StyledProfileHighlight>
             ))}
           </StyledProfileHighlights>
-          <StyledProfilePostsNav>
-            <span>
+          <StyledProfilePostsNav isPostGrid={isPostGrid}>
+            <span onClick={() => setIsPostGrid(true)} aria-hidden="true">
               <BsFillGrid1X2Fill />
             </span>
-            <span>
+            <span onClick={() => setIsPostGrid(false)} aria-hidden="true">
               <FaUserTag />
             </span>
           </StyledProfilePostsNav>
-          <StyledProfilePostsCt>
-            <StyledProfilePostsCtImages>
-              {userData.userposts.map(({ image, id, title }) => (
-                <StyledProfilePageSinglePost key={id}>
-                  <Link to={`/posts/${id}`}>
-                    <img src={image} alt={title} />
-                  </Link>
-                </StyledProfilePageSinglePost>
-              ))}
-            </StyledProfilePostsCtImages>
-          </StyledProfilePostsCt>
+          {isPostGrid && (
+            <StyledProfilePostsCt>
+              <StyledProfilePostsCtImages>
+                {userData.userposts.map(({ image, id, title }) => (
+                  <StyledProfilePageSinglePost key={id}>
+                    <Link to={`/posts/${id}`}>
+                      <img src={image} alt={title} />
+                    </Link>
+                  </StyledProfilePageSinglePost>
+                ))}
+              </StyledProfilePostsCtImages>
+            </StyledProfilePostsCt>
+          )}
         </StyledProfilePageContent>
         <StyledProfileSideBar isSetteingOpen={isSetteingOpen}>
           {SETTING_LIST.map(({ icon, title }, index) => (

@@ -21,10 +21,9 @@ import post2 from "../assets/posts/post2.jpg"
 import post3 from "../assets/posts/post3.jpg"
 import post4 from "../assets/posts/post4.jpg"
 import post5 from "../assets/posts/post5.jpg"
-import post6 from "../assets/posts/post6.jpeg"
+import post6 from "../assets/posts/post6.jpg"
 import post7 from "../assets/posts/post7.jpg"
 import post8 from "../assets/posts/post8.jpg"
-import post9 from "../assets/posts/post9.jpg"
 
 import { FaBehance, FaDribbble, FaPinterestP } from "react-icons/fa"
 import { ImSpoonKnife } from "react-icons/im"
@@ -169,20 +168,6 @@ export const posts = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas odio molestias magni assumenda deleniti nihil aut, aperiam delectus.",
   },
   {
-    image: post9,
-    id: 9,
-    title: "post-img",
-    user: avatar2,
-    location: "Iran, Tehran",
-    name: "john",
-    likes: 290,
-    comments: 120,
-    position: [35.505, 51.5],
-    username: "john.jjjj",
-    caption:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, molestiae! Consectetur iusto maxime iure! Provident?",
-  },
-  {
     image: post6,
     id: 10,
     title: "post-img",
@@ -203,7 +188,7 @@ export const posts = [
     user: avatar9,
     location: "Iran, Tehran",
     name: "fatemeh",
-    likes: 5990,
+    likes: 5999,
     comments: 342,
     position: [35.505, 51.5],
     username: "fatemeh.ffff",
@@ -306,13 +291,152 @@ export const initialUser = {
   ],
 }
 
+const userFollowOption = {
+  followers: [
+    {
+      avatar: avatar1,
+      username: "nick.nnnn",
+      name: "nick",
+      user_id: 1,
+    },
+    {
+      avatar: avatar2,
+      username: "john.hhhh",
+      name: "john",
+      user_id: 2,
+    },
+    {
+      avatar: avatar3,
+      username: "mahsa.mmmm",
+      name: "mahsa",
+      user_id: 3,
+    },
+    {
+      avatar: avatar4,
+      username: "ali.aaaa",
+      name: "ali",
+      user_id: 4,
+    },
+    {
+      avatar: avatar9,
+      username: "fatemeh.ffff",
+      name: "fatemeh",
+      user_id: 5,
+    },
+    {
+      avatar: avatar10,
+      username: "eisa.eeee",
+      name: "eisa",
+      user_id: 6,
+    },
+    {
+      avatar: avatar5,
+      username: "susan.ssss",
+      name: "susan",
+      user_id: 7,
+    },
+    {
+      avatar: avatar13,
+      username: "elisa.eeee",
+      name: "elisa",
+      user_id: 8,
+    },
+    {
+      avatar: avatar8,
+      username: "alireza.aaaa",
+      name: "alireza",
+      user_id: 9,
+    },
+    {
+      avatar: avatar7,
+      username: "sara.ssss",
+      name: "sara",
+      user_id: 10,
+    },
+    {
+      avatar: adminDefualt,
+      username: "eisa.rez",
+      name: "eisa",
+      user_id: 11,
+    },
+  ],
+  followings: [
+    {
+      avatar: avatar1,
+      username: "nick.nnnn",
+      name: "nick",
+      user_id: 1,
+    },
+    {
+      avatar: avatar2,
+      username: "john.hhhh",
+      name: "john",
+      user_id: 2,
+    },
+    {
+      avatar: avatar3,
+      username: "mahsa.mmmm",
+      name: "mahsa",
+      user_id: 3,
+    },
+    {
+      avatar: avatar4,
+      username: "ali.aaaa",
+      name: "ali",
+      user_id: 4,
+    },
+    {
+      avatar: avatar9,
+      username: "fatemeh.ffff",
+      name: "fatemeh",
+      user_id: 5,
+    },
+    {
+      avatar: avatar10,
+      username: "eisa.eeee",
+      name: "eisa",
+      user_id: 6,
+    },
+    {
+      avatar: avatar5,
+      username: "susan.ssss",
+      name: "susan",
+      user_id: 7,
+    },
+    {
+      avatar: avatar13,
+      username: "elisa.eeee",
+      name: "elisa",
+      user_id: 8,
+    },
+    {
+      avatar: avatar8,
+      username: "alireza.aaaa",
+      name: "alireza",
+      user_id: 9,
+    },
+    {
+      avatar: avatar7,
+      username: "sara.ssss",
+      name: "sara",
+      user_id: 10,
+    },
+    {
+      avatar: adminDefualt,
+      username: "eisa.rez",
+      name: "eisa",
+      user_id: 11,
+    },
+  ],
+}
+
 export const users = [
   {
     avatar: avatar1,
     name: "nick",
     username: "nick.nnnn",
-    followers: 7300,
-    followings: 1103,
+    followers: userFollowOption.followers,
+    followings: userFollowOption.followings,
     user_id: 1,
     bio: "Hello my name is Nick And I am From Some where",
     title: " web prgrammer",
@@ -322,8 +446,8 @@ export const users = [
     avatar: avatar2,
     name: "john",
     username: "john.hhhh",
-    followers: 12954,
-    followings: 254,
+    followers: userFollowOption.followers,
+    followings: userFollowOption.followings,
     user_id: 2,
     bio: "Hello my name is John ",
     title: "worker",
@@ -333,8 +457,8 @@ export const users = [
     avatar: avatar3,
     name: "mahsa",
     username: "mahsa.mmmm",
-    followers: 1213,
-    followings: 1230,
+    followers: userFollowOption.followers,
+    followings: userFollowOption.followings,
     user_id: 3,
     bio: "Hello my name is Mahsa Iranian ",
     title: " paniter ",
@@ -344,8 +468,8 @@ export const users = [
     avatar: avatar4,
     name: "ali",
     username: "ali.aaaa",
-    followers: 23204,
-    followings: 134,
+    followers: userFollowOption.followers,
+    followings: userFollowOption.followings,
     user_id: 4,
     bio: "Hello my name is Ali ",
     title: " manager ",
@@ -355,8 +479,8 @@ export const users = [
     avatar: avatar9,
     name: "fatemeh",
     username: "fatemeh.ffff",
-    followers: 11820,
-    followings: 214,
+    followers: userFollowOption.followers,
+    followings: userFollowOption.followings,
     user_id: 5,
     bio: "Hello my name is Fateme and I am from Iran ",
     title: " desiner ",
@@ -366,8 +490,8 @@ export const users = [
     avatar: avatar10,
     name: "eisa",
     username: "eisa.eeee",
-    followers: 8220,
-    followings: 544,
+    followers: userFollowOption.followers,
+    followings: userFollowOption.followings,
     user_id: 6,
     bio: "Hello my name is Eisa and i am from Tehran ",
     title: " web developer ",
@@ -377,8 +501,8 @@ export const users = [
     avatar: avatar5,
     name: "susan",
     username: "susan.ssss",
-    followers: 6420,
-    followings: 134,
+    followers: userFollowOption.followers,
+    followings: userFollowOption.followings,
     user_id: 7,
     bio: "Hello There! My name is Susan and i am from some where ",
     title: " local guide ",
@@ -388,8 +512,8 @@ export const users = [
     avatar: avatar13,
     name: "elisa",
     username: "elisa.eeee",
-    followers: 1053,
-    followings: 2013,
+    followers: userFollowOption.followers,
+    followings: userFollowOption.followings,
     user_id: 8,
     bio: "Heyoo! my name is Elisa and I am from Mashhad",
     title: " engineer  ",
@@ -399,8 +523,8 @@ export const users = [
     avatar: avatar8,
     name: "alireza",
     username: "alireza.aaaa",
-    followers: 204,
-    followings: 1134,
+    followers: userFollowOption.followers,
+    followings: userFollowOption.followings,
     user_id: 9,
     bio: "Hello my name is AliReza living in Boushehr",
     title: " student ",
@@ -410,8 +534,8 @@ export const users = [
     avatar: avatar7,
     name: "sara",
     username: "sara.ssss",
-    followers: 204,
-    followings: 1134,
+    followers: userFollowOption.followers,
+    followings: userFollowOption.followings,
     user_id: 10,
     bio: "Hello my name is Sara living in Hamadan ",
     title: " student ",
@@ -421,14 +545,15 @@ export const users = [
     avatar: adminDefualt,
     name: "eisa",
     username: "eisa.rez",
-    followers: 632,
-    followings: 231,
+    followers: userFollowOption.followers,
+    followings: userFollowOption.followings,
     user_id: 11,
     bio: "Hello my name is Eisa living in Ardabil ",
     title: " web Developer react  ",
     highlights: highlights,
   },
 ]
+
 export const SETTING_LIST = [
   { title: "Setting", icon: <FiSettings /> },
   { title: "Archives", icon: <BiArchiveIn /> },

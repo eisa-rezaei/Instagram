@@ -9,6 +9,7 @@ import Explore from "../components/Explore"
 import UserLocation from "../components/Location"
 import Post from "../components/Posts"
 import Profile from "../components/Profile"
+import FollowOptions from "../components/FollowOption"
 
 const App = () => (
   <Location>
@@ -19,6 +20,7 @@ const App = () => (
         <Post path="/posts/:id" />
         <Profile path="/profile/" username="eisa.rez" exact />
         <Profile path="/profile/:username" />
+        <FollowOptions path="/follow-option/:username" exact />
         <Likes path="/likes" exact />
         <AddStory path="/addstory" exact />
         <AddPost path="/addpost" exact />

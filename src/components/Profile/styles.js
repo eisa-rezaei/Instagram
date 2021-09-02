@@ -100,7 +100,8 @@ export const StyledProfileUserInfoFollowers = styled.div`
   & svg {
     color: #e0e0e0;
   }
-  & span {
+  & span,
+  a {
     text-align: center;
     & p {
       margin-top: 5px;
@@ -209,7 +210,8 @@ export const StyledProfilePostsNav = styled.div`
     border-bottom: 1px solid #d0d0d0;
     color: #909090;
     cursor: pointer;
-    :nth-child(1) {
+
+    ${props => (props.isPostGrid ? `:nth-child(1)` : `:nth-child(2)`)} {
       color: #e73666;
       border-bottom: 1px solid #e73666;
     }

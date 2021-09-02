@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { navigate } from "@reach/router"
 import { Link } from "gatsby"
 
-import { BsArrowLeft, BsBookmark } from "react-icons/bs"
+import { BsArrowLeft, BsBookmark, BsBookmarkFill } from "react-icons/bs"
 import { BiDotsHorizontalRounded } from "react-icons/bi"
 import { VscComment } from "react-icons/vsc"
 import { FiSend } from "react-icons/fi"
@@ -43,6 +43,7 @@ const PostPage = props => {
     setPostOptionIsOpen(!postOptionIsOpen)
   }
   const [isLiked, setIsLiked] = useState(false)
+  const [isSaved, setIsSaved] = useState(false)
 
   return (
     <Layout>
@@ -91,7 +92,11 @@ const PostPage = props => {
               <VscComment />
               <FiSend />
             </span>
-            <BsBookmark />
+            {isSaved ? (
+              <BsBookmarkFill onClick={() => setIsSaved(!isSaved)} />
+            ) : (
+              <BsBookmark onClick={() => setIsSaved(!isSaved)} />
+            )}
           </StyledPostIconsBar>
           <StyledPostCaption>
             <h4>{isLiked ? likes + 1 : likes} likes</h4>
