@@ -63,11 +63,11 @@ const Index = ({
             <AiOutlineHeart onClick={() => setIsLiked(!isLiked)} />
           )}
           {isLiked
-            ? likes >= 1000
-              ? `${(likes + 1) / 1000}k`
+            ? likes >= 10000
+              ? `${((likes + 1) / 1000).toString().substring(0, 4)}k`
               : likes + 1
-            : likes >= 1000
-            ? `${likes / 1000}k`
+            : likes >= 10000
+            ? `${(likes / 1000).toString().substring(0, 4)}k`
             : likes}
         </span>
         <span>
