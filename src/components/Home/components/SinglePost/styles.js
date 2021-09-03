@@ -70,6 +70,7 @@ export const StyledHomeSinglePostHeadDetails = styled.div`
       cursor: pointer;
       background-color: royalblue;
       transition: all 0.15s linear;
+      object-fit: contain;
       :hover {
         border: 1px solid orange;
       }

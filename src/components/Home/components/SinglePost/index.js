@@ -4,7 +4,7 @@ import { Link } from "@reach/router"
 import { FaRegCommentDots } from "react-icons/fa"
 import { BiDotsVerticalRounded } from "react-icons/bi"
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai"
-import { BsBookmark } from "react-icons/bs"
+import { BsBookmark, BsBookmarkFill } from "react-icons/bs"
 
 import {
   StyledHomeSinglePost,
@@ -29,6 +29,21 @@ const Index = ({
   togglePostOptionHandler,
 }) => {
   const [isLiked, setIsLiked] = useState(false)
+  const [isSaved, setIsSaved] = useState(false)
+
+  const getLikesCount = () => {
+    const makeShortedNumber = number => {
+      return number >= 10000
+        ? `${(number / 1000).toString().substring(0, 4)}k`
+        : number
+    }
+    if (isLiked) {
+      return makeShortedNumber(likes + 1)
+    } else {
+      return makeShortedNumber(likes)
+    }
+  }
+
   return (
     <StyledHomeSinglePost>
       <StyledHomeSinglePostHead>
@@ -60,14 +75,18 @@ const Index = ({
           ) : (
             <AiOutlineHeart onClick={() => setIsLiked(!isLiked)} />
           )}
-          {likes >= 1000 ? `${likes / 1000}k` : likes}
+          {getLikesCount(likes)}
         </span>
         <span>
           <FaRegCommentDots />
           {comments >= 1000 ? `${comments / 1000}k` : comments}
         </span>
         <span>
-          <BsBookmark />
+          {isSaved ? (
+            <BsBookmarkFill onClick={() => setIsSaved(!isSaved)} />
+          ) : (
+            <BsBookmark onClick={() => setIsSaved(!isSaved)} />
+          )}
         </span>
       </StyledHomeSinglePostLikesCommentsBox>
     </StyledHomeSinglePost>

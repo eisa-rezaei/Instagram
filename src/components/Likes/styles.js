@@ -20,7 +20,7 @@ export const StyledLikePageHeader = styled.header`
   align-items: center;
   padding: 0 16px;
 `
-export const StyledLikePageContent = styled.div`
+export const StyledLikePageContent = styled.ul`
   width: 100%;
   height: auto;
   display: flex;
