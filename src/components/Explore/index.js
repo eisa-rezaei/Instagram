@@ -28,14 +28,14 @@ const Explore = () => {
         </StyledGlobalPageHeader>
         <StyledGlobalPageFirstContant>
           <span>
-            <Link to="/posts/12">
+            <Link to="/posts/7">
               <img src={posts[11].image} alt="post1" />
             </Link>
-            <Link to="/posts/9">
+            <Link to="/posts/10">
               <img src={posts[8].image} alt="post2" />
             </Link>
           </span>
-          <Link to="/posts/8">
+          <Link to="/posts/2">
             <img src={posts[7].image} alt="post3" />
           </Link>
         </StyledGlobalPageFirstContant>
