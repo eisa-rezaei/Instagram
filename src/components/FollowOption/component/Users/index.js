@@ -1,12 +1,13 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+import { BiDotsVerticalRounded } from "react-icons/bi"
+
 import {
   StyledFollowPageListItemInfo,
   StyledFollowPageContentListItem,
   StyledFollowPageListItemInfoButton,
   StyledFollowPageShadeToggle,
 } from "./styles"
-import { BiDotsVerticalRounded } from "react-icons/bi"
 
 const Index = ({ username, avatar, name, setIsPopUpOpen }) => {
   const [isFollowing, setIsFollowed] = useState(true)
@@ -18,10 +19,7 @@ const Index = ({ username, avatar, name, setIsPopUpOpen }) => {
       </Link>
       <StyledFollowPageListItemInfo>
         <span>
-          <Link to={`/profile/${username}`}>{`${username.substring(
-            0,
-            8
-          )}..`}</Link>
+          <Link to={`/profile/${username}`}>{username}</Link>
           {name}
         </span>
         <StyledFollowPageListItemInfoButton

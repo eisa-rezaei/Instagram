@@ -1,9 +1,12 @@
 import React, { useState } from "react"
 import { navigate } from "gatsby"
-import FollowOption from "./component/Users"
 
 import { BsArrowLeft } from "react-icons/bs"
+import { RiSearchLine } from "react-icons/ri"
+
+import FollowOption from "./component/Users"
 import { users } from "../../data/data"
+import Layout from "../Layout"
 import {
   StyledFollowOptionHeader,
   StyledFollowOptionInput,
@@ -13,14 +16,37 @@ import {
   StyledFollowOptionTogglePagesBar,
   StyledUsersListCt,
 } from "./styles"
-import Layout from "../Layout"
-import { RiSearchLine } from "react-icons/ri"
 
 const Index = ({ username }) => {
   const [isFollowingPage, setisFollowingPage] = useState(true)
   const [inputValue, setInputValue] = useState("")
   const [isPopUpOpen, setIsPopUpOpen] = useState(false)
   const user = users.filter(user => user.username === username)[0]
+
+  const followOptionListHandler = data => {
+    const List = data
+      .filter(user => {
+        if (inputValue === "") {
+          return user
+        } else if (
+          (user.username.toLowerCase() || user.name.toLowerCase()).includes(
+            inputValue.toLowerCase()
+          )
+        ) {
+          return user
+        } else {
+          return false
+        }
+      })
+      .map(user => (
+        <FollowOption
+          {...user}
+          key={user.user_id}
+          setIsPopUpOpen={setIsPopUpOpen}
+        />
+      ))
+    return <StyledUsersListCt>{List}</StyledUsersListCt>
+  }
 
   return (
     <Layout>
@@ -30,8 +56,8 @@ const Index = ({ username }) => {
           isPopUpOpen={isPopUpOpen}
         >
           <ul>
-            <li>manage Notifications</li>
-            <li>mute</li>
+            <li>Manage Notifications</li>
+            <li>Mute</li>
           </ul>
         </StyledFollowOptionPopUp>
         <StyledFollowOptionHeader>
@@ -56,56 +82,9 @@ const Index = ({ username }) => {
           />
         </StyledFollowOptionSearchBox>
 
-        {isFollowingPage ? (
-          <StyledUsersListCt>
-            {user.followings
-              .filter(user => {
-                if (inputValue === "") {
-                  return user
-                } else if (
-                  (
-                    user.username.toLowerCase() || user.name.toLowerCase()
-                  ).includes(inputValue.toLowerCase())
-                ) {
-                  return user
-                } else {
-                  return false
-                }
-              })
-              .map(user => (
-                <FollowOption
-                  {...user}
-                  key={user.user_id}
-                  setIsPopUpOpen={setIsPopUpOpen}
-                />
-              ))}
-          </StyledUsersListCt>
-        ) : (
-          <StyledUsersListCt>
-            {user.followers
-              .filter(user => {
-                if (inputValue === "") {
-                  return user
-                } else if (
-                  (
-                    user.username.toLowerCase() || user.name.toLowerCase()
-                  ).includes(inputValue.toLowerCase())
-                ) {
-                  return user
-                } else {
-                  return false
-                }
-              })
-              .map(user => (
-                <FollowOption
-                  {...user}
-                  key={user.user_id}
-                  isFollowingPage={isFollowingPage}
-                  setIsPopUpOpen={setIsPopUpOpen}
-                />
-              ))}
-          </StyledUsersListCt>
-        )}
+        {isFollowingPage
+          ? followOptionListHandler(user.followings)
+          : followOptionListHandler(user.followers)}
       </StyledFollowOptionPageCt>
     </Layout>
   )

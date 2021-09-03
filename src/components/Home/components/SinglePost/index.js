@@ -31,6 +31,19 @@ const Index = ({
   const [isLiked, setIsLiked] = useState(false)
   const [isSaved, setIsSaved] = useState(false)
 
+  const getLikesCount = () => {
+    const makeShortedNumber = number => {
+      return number >= 10000
+        ? `${(number / 1000).toString().substring(0, 4)}k`
+        : number
+    }
+    if (isLiked) {
+      return makeShortedNumber(likes + 1)
+    } else {
+      return makeShortedNumber(likes)
+    }
+  }
+
   return (
     <StyledHomeSinglePost>
       <StyledHomeSinglePostHead>
@@ -62,13 +75,7 @@ const Index = ({
           ) : (
             <AiOutlineHeart onClick={() => setIsLiked(!isLiked)} />
           )}
-          {isLiked
-            ? likes >= 10000
-              ? `${((likes + 1) / 1000).toString().substring(0, 4)}k`
-              : likes + 1
-            : likes >= 10000
-            ? `${(likes / 1000).toString().substring(0, 4)}k`
-            : likes}
+          {getLikesCount(likes)}
         </span>
         <span>
           <FaRegCommentDots />

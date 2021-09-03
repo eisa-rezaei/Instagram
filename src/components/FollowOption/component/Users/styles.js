@@ -33,7 +33,7 @@ export const StyledFollowPageListItemInfo = styled.div`
   justify-content: center;
   font-size: 0.8rem;
   & span {
-    width: 100%;
+    width: 320px;
     padding-right: 10px;
     display: flex;
     flex-direction: column;
