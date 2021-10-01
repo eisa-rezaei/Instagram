@@ -56,12 +56,12 @@ export const StyledProfileUserInfo = styled.div`
   padding: 0 1rem;
 `
 export const StyledProfileImageCt = styled.div`
+  width: 90px;
+  height: 90px;
   position: relative;
-  width: 80px;
-  height: 80px;
   & img {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     object-fit: cover;
     border-radius: 50%;
     border: 1px solid #d0d0d0;
@@ -80,11 +80,11 @@ export const StyledProfileImageCt = styled.div`
     cursor: pointer;
   }
   @media (max-width: 600px) {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     & img {
-      width: 70px;
-      height: 70px;
+      width: 80px;
+      height: 80px;
     }
   }
 `

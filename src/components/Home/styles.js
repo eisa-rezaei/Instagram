@@ -111,7 +111,7 @@ export const StyledHomeUserStory = styled.span`
   color: #606060;
 `
 export const StyledHomePosts = styled.div`
-  overflow: scroll;
+  overflow: auto;
   display: flex;
   align-items: center;
   flex-direction: column;

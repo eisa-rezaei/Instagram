@@ -5,22 +5,22 @@ export const StyledGlobalPageCt = styled.main`
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: baseline;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  justify-content: flex-start;
+  align-items: center;
   padding-bottom: 60px;
+  overflow: auto;
 `
 
 // displaying the search box
 export const StyledGlobalPageHeader = styled.header`
-  min-width: 100%;
+  width: min(100%, 100vw);
   min-height: 70px;
   padding: 20px;
   position: sticky;
   top: 0;
+  z-index: 2;
   background-color: #fff;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
 `
@@ -29,11 +29,11 @@ export const StyledGlobalPageHeader = styled.header`
 export const StyledGlobalPageHeaderSearchBox = styled.div`
   width: 90%;
   height: 40px;
+  z-index: 2;
   font-size: 1.5rem;
   background-color: #e0e0e0;
   border-radius: 10px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 `
@@ -86,9 +86,8 @@ export const StyledGlobalPageSecoundContant = styled.div`
   width: 100%;
   height: auto;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   flex-wrap: wrap;
+  align-items: flex-start;
 `
 export const StyledGlobalPageSecoundContantSinlgeItem = styled.div`
   width: 33.333%;
