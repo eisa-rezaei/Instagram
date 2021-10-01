@@ -52,7 +52,7 @@ export const StyledPostCt = styled.div`
   height: auto;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  overflow: auto;
 
   & img {
     width: 100%;
@@ -234,8 +234,9 @@ export const StyledPostImgCt = styled.div`
 export const StyledPostHeartAnimation = styled.div`
   width: 150px;
   height: 150px;
-  top: 130px;
-  left: 140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const StyledLikePageCt = styled.main`
   width: 100%;
   height: 100%;
-  overflow: scroll;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;

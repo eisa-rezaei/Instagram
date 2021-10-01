@@ -4,11 +4,10 @@ export const StyledStoryPageCt = styled.main`
   width: 100%;
   height: 100%;
   position: relative;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  overflow: scroll;
-
   & span {
     width: 70px;
     height: 70px;
@@ -63,12 +62,15 @@ export const StyledStoryPageCamera = styled.video`
 `
 export const StyledStoryPageCameraGallary = styled.div`
   width: 100%;
-  height: auto;
   min-height: 160px;
-  position: absolute;
   top: 78%;
   z-index: 4;
+  position: absolute;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
   background: rgb(0, 0, 0);
   background: linear-gradient(
     180deg,
@@ -79,7 +81,6 @@ export const StyledStoryPageCameraGallary = styled.div`
   & img {
     width: 130px;
     height: 120px;
-    margin: 0 5px;
   }
 `
 
@@ -87,13 +88,13 @@ export const StyledStoryPageCameraGallaryLinks = styled.div`
   width: 100vw;
   height: 40px;
   font-size: 0.8rem;
+  margin-bottom: 15px;
+  color: #e0e0e0;
   display: flex;
   align-items: center;
-  padding: 5px 0;
-  color: #e0e0e0;
+  justify-content: space-around;
 
   & p {
-    width: 110px;
     height: 20px;
     text-align: center;
     font-size: 0.7rem;

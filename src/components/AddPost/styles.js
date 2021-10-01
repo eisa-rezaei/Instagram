@@ -6,7 +6,7 @@ export const StyledAddPostCt = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: baseline;
-  overflow: scroll;
+  overflow: auto;
   padding: 1rem 0;
 `
 

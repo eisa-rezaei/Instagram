@@ -148,8 +148,9 @@ export const StyledHomeSinglePostImgCt = styled.div`
 export const StyledHomeSinglePostHeartAnimation = styled.div`
   width: 150px;
   height: 150px;
-  top: 30%;
-  left: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;

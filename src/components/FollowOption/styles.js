@@ -40,7 +40,6 @@ export const StyledFollowOptionTogglePagesBar = styled.div`
   z-index: 2;
   position: absolute;
   display: flex;
-  flex-direction: row;
   align-items: center;
   border-bottom: 2px solid gray;
   background-color: #fff;

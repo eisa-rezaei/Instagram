@@ -29,7 +29,34 @@ export const GlobalStyles = createGlobalStyle`
     background-color: inherit;
     cursor: pointer;
   }
+
+::-webkit-scrollbar {
+  width: 10px;
+  z-index: 1;
+}
+
+::-webkit-scrollbar-track {
+  background: inherit; 
+  border-radius: 20px;
+  z-index: 1;
+  :hover {
+  background: #f1f1f1; 
+  border-radius: 20px;
+  }
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 20px;
+  z-index: 1;
+  :hover{
+  background: #555; 
+  }
+}
+
   @media (max-width: 600px) {
+    ::-webkit-scrollbar {
+     width: 0;
+    }
     p {
       font-size: 0.8rem;
     }
