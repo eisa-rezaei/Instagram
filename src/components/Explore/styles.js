@@ -84,7 +84,6 @@ export const StyledGlobalPageFirstContant = styled.div`
 `
 export const StyledGlobalPageSecoundContant = styled.div`
   width: 100%;
-  height: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;

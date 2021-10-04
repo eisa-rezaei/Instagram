@@ -70,25 +70,27 @@ export const StyledLocationPageSecoundContantToggle = styled.div`
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    :first-child {
-      border-bottom: 3px solid #222;
-    }
+
+    ${props =>
+      props.isTopPage
+        ? ":first-child {border-bottom: 3px solid #222;}"
+        : ":last-child {border-bottom: 3px solid #222;}"}
   }
 `
 
 export const StyledLocationPageSecoundContant = styled.div`
   width: 100%;
-  height: auto;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 `
 export const StyledLocationPageSecoundContantSinlgeItem = styled.div`
+  width: 33.333%;
   height: 127px;
   & img {
-    width: 138px;
+    width: 99%;
     height: 125px;
-    margin: 2px 2px 2px 0;
+    margin: 0 2px 2px 0;
   }
 `
