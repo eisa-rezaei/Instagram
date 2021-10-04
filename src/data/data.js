@@ -279,9 +279,6 @@ export const initialUser = {
   title: "front end web developer",
   bio: "front end react web developer living in Iran country  *** THIS IS DEFAULT ***",
   username: "eisa.rez",
-  followers: 675,
-  followings: 452,
-  posts: 6,
   location: "Iran",
   highlights: highlights,
   userposts: [
@@ -548,8 +545,8 @@ export const users = [
     followers: userFollowOption.followers,
     followings: userFollowOption.followings,
     user_id: 11,
-    bio: "Hello my name is Eisa living in Ardabil ",
-    title: " web Developer react  ",
+    title: "React developer",
+    bio: "Frontend | react developer living in Iran country.",
     highlights: highlights,
   },
 ]
